@@ -1,7 +1,7 @@
 /* empty css                                       */
 import { d as createAstro, c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../../../chunks/astro/server_DjmVd5Sg.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout, u as useTranslation } from '../../../chunks/BaseLayout_D2UNslmg.mjs';
+import { $ as $$BaseLayout, u as useTranslation } from '../../../chunks/BaseLayout_D8w4rvTB.mjs';
 import { s as sanityClient } from '../../../chunks/sanity_mdzBUkTw.mjs';
 import { PortableText } from '@portabletext/react';
 export { renderers } from '../../../renderers.mjs';

@@ -187,7 +187,6 @@ const programs$1 = {
 			key: "kindergarten",
 			label: "Kindergarten",
 			grades: "KG 1 – KG 2",
-			ages: "Ages 4–5",
 			years: "2 years",
 			description: "A nurturing, play-based start to learning. Children develop early literacy and numeracy in English, with French introduced as a fun, dedicated language subject from day one.",
 			highlights: [
@@ -201,7 +200,6 @@ const programs$1 = {
 			key: "primary",
 			label: "Primary School",
 			grades: "Basic 1 – Basic 6",
-			ages: "Ages 6–11",
 			years: "6 years",
 			description: "Six years of solid academic grounding aligned to the Ghana Education Service (GES) curriculum. All core subjects are taught in English, with French as a dedicated subject class throughout all six years.",
 			highlights: [
@@ -215,7 +213,6 @@ const programs$1 = {
 			key: "junior_high",
 			label: "Junior High School (JHS)",
 			grades: "JHS 1 – JHS 3",
-			ages: "Ages 12–14",
 			years: "3 years (BECE)",
 			description: "Three years preparing students for the Basic Education Certificate Examination (BECE). Students study a full range of GES subjects in English, with French as a dedicated BECE subject, plus Business and Computing strands.",
 			highlights: [
@@ -233,7 +230,7 @@ const admissions$1 = {
 	subtitle: "We welcome children of every background. Fill in this form and our admissions team will be in touch within 48 hours.",
 	requirements_title: "Admission Requirements",
 	requirements: [
-		"Open to children from Kindergarten (age ~4) through Junior High School",
+		"Open to children from Kindergarten through Junior High School",
 		"Previous school report or academic record (where applicable)",
 		"Child's birth certificate or valid ID",
 		"Parent or guardian national ID",
@@ -279,19 +276,16 @@ const fees$1 = {
 	static_fee_table: [
 		{
 			level: "Kindergarten (KG 1 – KG 2)",
-			ages: "Ages 4–5",
 			duration: "2 years",
 			fee: "Contact us"
 		},
 		{
 			level: "Primary School (Basic 1 – 6)",
-			ages: "Ages 6–11",
 			duration: "6 years",
 			fee: "Contact us"
 		},
 		{
 			level: "Junior High School (JHS 1 – 3)",
-			ages: "Ages 12–14",
 			duration: "3 years (BECE)",
 			fee: "Contact us"
 		}
@@ -585,7 +579,6 @@ const programs = {
 			key: "kindergarten",
 			label: "Jardin d'enfants (Maternelle)",
 			grades: "PS – MS – GS",
-			ages: "3–5 ans",
 			years: "3 ans",
 			description: "Un début d'apprentissage bienveillant et ludique. Les enfants développent l'alphabétisation et les premières notions de calcul en anglais, avec le français introduit comme matière dédiée dès le premier jour.",
 			highlights: [
@@ -599,7 +592,6 @@ const programs = {
 			key: "primary",
 			label: "École Primaire",
 			grades: "CP – CE1 – CE2 – CM1 – CM2",
-			ages: "6–11 ans",
 			years: "6 ans",
 			description: "Six années de bases académiques solides, alignées sur le programme du Ghana Education Service (GES). Toutes les matières principales sont enseignées en anglais, avec le français comme matière dédiée tout au long des six années.",
 			highlights: [
@@ -612,15 +604,14 @@ const programs = {
 		{
 			key: "junior_high",
 			label: "Collège",
-			grades: "6ème – 5ème – 4ème – 3ème",
-			ages: "11–15 ans",
-			years: "4 ans (BECE)",
-			description: "Quatre années de préparation au Brevet d'Études du Premier Cycle (BECE). Les élèves étudient toutes les matières GES avec des filières avancées en Français, Commerce et Informatique, leur donnant un avantage distinctif à l'examen et au-delà.",
+			grades: "6ème – 5ème – 4ème",
+			years: "3 ans (BECE)",
+			description: "Trois années de préparation au Brevet d'Études du Premier Cycle (BECE). Les élèves étudient toutes les matières GES avec des filières avancées en Français, Commerce et Informatique, leur donnant un avantage distinctif à l'examen et au-delà.",
 			highlights: [
 				"Préparation complète au BECE (toutes matières GES)",
 				"Filière Français avancé",
 				"Option Commerce & Entrepreneuriat",
-				"Informatique et TIC sur les quatre années",
+				"Informatique et TIC sur les trois années",
 				"Internat disponible dès la 6ème"
 			]
 		}
@@ -631,7 +622,7 @@ const admissions = {
 	subtitle: "Nous accueillons les enfants de tout horizon. Remplissez ce formulaire et notre équipe d'admissions vous contactera dans les 48 heures.",
 	requirements_title: "Conditions d'Admission",
 	requirements: [
-		"Ouvert aux enfants du Jardin d'enfants (~3 ans) jusqu'au Collège",
+		"Ouvert aux enfants du Jardin d'enfants jusqu'au Collège",
 		"Bulletin scolaire précédent (si applicable)",
 		"Acte de naissance ou pièce d'identité de l'enfant",
 		"Carte nationale du parent ou tuteur",
@@ -677,20 +668,17 @@ const fees = {
 	static_fee_table: [
 		{
 			level: "Jardin d'enfants (PS – GS)",
-			ages: "3–5 ans",
 			duration: "3 ans",
 			fee: "Contactez-nous"
 		},
 		{
 			level: "École Primaire (CP – CM2)",
-			ages: "6–11 ans",
 			duration: "6 ans",
 			fee: "Contactez-nous"
 		},
 		{
-			level: "Collège (6ème – 3ème)",
-			ages: "11–15 ans",
-			duration: "4 ans (BECE)",
+			level: "Collège (6ème – 4ème)",
+			duration: "3 ans (BECE)",
 			fee: "Contactez-nous"
 		}
 	],

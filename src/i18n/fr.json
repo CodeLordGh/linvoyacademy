@@ -140,7 +140,6 @@
         "key": "kindergarten",
         "label": "Jardin d'enfants (Maternelle)",
         "grades": "PS – MS – GS",
-        "ages": "3–5 ans",
         "years": "3 ans",
         "description": "Un début d'apprentissage bienveillant et ludique. Les enfants développent l'alphabétisation et les premières notions de calcul en anglais, avec le français introduit comme matière dédiée dès le premier jour.",
         "highlights": ["Français enseigné comme matière dès la Petite Section", "Apprentissage par le jeu et l'expérience", "Développement social et émotionnel", "Sessions disponibles le matin et l'après-midi"]
@@ -149,7 +148,6 @@
         "key": "primary",
         "label": "École Primaire",
         "grades": "CP – CE1 – CE2 – CM1 – CM2",
-        "ages": "6–11 ans",
         "years": "6 ans",
         "description": "Six années de bases académiques solides, alignées sur le programme du Ghana Education Service (GES). Toutes les matières principales sont enseignées en anglais, avec le français comme matière dédiée tout au long des six années.",
         "highlights": ["Programme complet aligné GES", "Français comme matière dédiée — toutes les années", "Informatique et culture numérique dès le CP", "Sensibilisation aux affaires intégrée dans les matières"]
@@ -157,11 +155,10 @@
       {
         "key": "junior_high",
         "label": "Collège",
-        "grades": "6ème – 5ème – 4ème – 3ème",
-        "ages": "11–15 ans",
-        "years": "4 ans (BECE)",
-        "description": "Quatre années de préparation au Brevet d'Études du Premier Cycle (BECE). Les élèves étudient toutes les matières GES avec des filières avancées en Français, Commerce et Informatique, leur donnant un avantage distinctif à l'examen et au-delà.",
-        "highlights": ["Préparation complète au BECE (toutes matières GES)", "Filière Français avancé", "Option Commerce & Entrepreneuriat", "Informatique et TIC sur les quatre années", "Internat disponible dès la 6ème"]
+        "grades": "6ème – 5ème – 4ème",
+        "years": "3 ans (BECE)",
+        "description": "Trois années de préparation au Brevet d'Études du Premier Cycle (BECE). Les élèves étudient toutes les matières GES avec des filières avancées en Français, Commerce et Informatique, leur donnant un avantage distinctif à l'examen et au-delà.",
+        "highlights": ["Préparation complète au BECE (toutes matières GES)", "Filière Français avancé", "Option Commerce & Entrepreneuriat", "Informatique et TIC sur les trois années", "Internat disponible dès la 6ème"]
       }
     ]
   },
@@ -170,7 +167,7 @@
     "subtitle": "Nous accueillons les enfants de tout horizon. Remplissez ce formulaire et notre équipe d'admissions vous contactera dans les 48 heures.",
     "requirements_title": "Conditions d'Admission",
     "requirements": [
-      "Ouvert aux enfants du Jardin d'enfants (~3 ans) jusqu'au Collège",
+      "Ouvert aux enfants du Jardin d'enfants jusqu'au Collège",
       "Bulletin scolaire précédent (si applicable)",
       "Acte de naissance ou pièce d'identité de l'enfant",
       "Carte nationale du parent ou tuteur",
@@ -214,9 +211,9 @@
     "registration_fee_label": "Frais d'inscription (uniques)",
     "registration_fee_value": "Contactez-nous",
     "static_fee_table": [
-      { "level": "Jardin d'enfants (PS – GS)", "ages": "3–5 ans", "duration": "3 ans", "fee": "Contactez-nous" },
-      { "level": "École Primaire (CP – CM2)", "ages": "6–11 ans", "duration": "6 ans", "fee": "Contactez-nous" },
-      { "level": "Collège (6ème – 3ème)", "ages": "11–15 ans", "duration": "4 ans (BECE)", "fee": "Contactez-nous" }
+      { "level": "Jardin d'enfants (PS – GS)", "duration": "3 ans", "fee": "Contactez-nous" },
+      { "level": "École Primaire (CP – CM2)", "duration": "6 ans", "fee": "Contactez-nous" },
+      { "level": "Collège (6ème – 4ème)", "duration": "3 ans (BECE)", "fee": "Contactez-nous" }
     ],
     "boarding_row_label": "Internat (par trimestre, tout niveau)",
     "boarding_row_fee": "Contactez-nous",

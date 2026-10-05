@@ -1,7 +1,7 @@
 /* empty css                                    */
 import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../../chunks/astro/server_DjmVd5Sg.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout, u as useTranslation } from '../../chunks/BaseLayout_D2UNslmg.mjs';
+import { $ as $$BaseLayout, u as useTranslation } from '../../chunks/BaseLayout_D8w4rvTB.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Boarding = createComponent(($$result, $$props, $$slots) => {
@@ -19,7 +19,7 @@ const $$Boarding = createComponent(($$result, $$props, $$slots) => {
   };
   const defaultIcon = "M5 13l4 4L19 7";
   return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "lang": lang, "title": b.title, "description": b.subtitle }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<div class="bg-navy-700 text-white py-20 relative overflow-hidden -mt-16 pt-32"> <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #f0a500 1px, transparent 1px); background-size: 28px 28px;"></div> <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">Boarding School</span> <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">${b.title}</h1> <p class="text-gray-300 text-lg max-w-2xl">${b.subtitle}</p> </div> </div> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20"> <!-- Intro --> <div class="max-w-3xl reveal"> <p class="text-gray-700 text-lg leading-relaxed">${b.intro}</p> </div> <!-- Features grid --> <section class="reveal"> <h2 class="section-title">${b.features_title}</h2> <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"> ${b.features.map((feature, i) => renderTemplate`<div${addAttribute(`reveal delay-${(i + 1) * 100} group bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300`, "class")}> <div class="w-12 h-12 rounded-xl bg-navy-700/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors"> <svg class="w-6 h-6 text-navy group-hover:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"${addAttribute(featureIcons[feature.title] || defaultIcon, "d")}></path> </svg> </div> <h3 class="font-heading font-bold text-navy mb-2">${feature.title}</h3> <p class="text-gray-500 text-sm leading-relaxed">${feature.description}</p> </div>`)} </div> </section> <!-- Eligibility --> <section class="reveal bg-cream rounded-2xl p-8 md:p-12"> <div class="grid md:grid-cols-2 gap-10 items-center"> <div> <h2 class="text-2xl font-heading font-bold text-navy mb-4">${b.eligibility_title}</h2> <p class="text-gray-700 leading-relaxed">${b.eligibility}</p> </div> <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"> <h3 class="font-heading font-bold text-navy mb-4 text-lg">Quick Facts</h3> <ul class="space-y-3"> ${[
-    "Open from Primary school upwards",
+    "Open from Kindergarten upwards",
     "Boys and girls welcome",
     "Boarding and day options available",
     "Parents receive weekly updates",
