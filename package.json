@@ -23,11 +23,11 @@
     "url": "https://github.com/mawuenakossibaboh/linvoy-academy"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/patch-runtime.js",
     "preview": "astro preview",
     "astro": "astro"
   },
