@@ -1,8 +1,0 @@
----
-// Root page: redirect to the appropriate locale based on Accept-Language header
-const acceptLanguage = Astro.request.headers.get('accept-language') || '';
-const prefersFrench = acceptLanguage.toLowerCase().includes('fr');
-const locale = prefersFrench ? 'fr' : 'en';
-
-return Astro.redirect(`/${locale}/`, 302);
----
