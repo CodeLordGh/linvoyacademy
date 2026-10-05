@@ -1,0 +1,45 @@
+/* empty css                                    */
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../../chunks/astro/server_DjmVd5Sg.mjs';
+import 'kleur/colors';
+import { $ as $$BaseLayout, u as useTranslation } from '../../chunks/BaseLayout_fDfeTooz.mjs';
+export { renderers } from '../../renderers.mjs';
+
+const $$Boarding = createComponent(($$result, $$props, $$slots) => {
+  const lang = "en";
+  const t = useTranslation(lang);
+  const b = t.boarding;
+  const featureIcons = {
+    "24/7 Supervision": "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 002 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+    "Healthy Meals": "M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z",
+    "Structured Study": "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
+    "Recreational Time": "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+    "Pastoral Care": "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+    "Safe & Clean Rooms": "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+    "CCTV 24/7 Security": "M15 10l4.553-2.069A1 1 0 0121 8.87V15.13a1 1 0 01-1.447.9L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"
+  };
+  const defaultIcon = "M5 13l4 4L19 7";
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "lang": lang, "title": b.title, "description": b.subtitle }, { "default": ($$result2) => renderTemplate`  ${maybeRenderHead()}<div class="bg-navy-700 text-white py-20 relative overflow-hidden -mt-16 pt-32"> <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #f0a500 1px, transparent 1px); background-size: 28px 28px;"></div> <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">Boarding School</span> <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">${b.title}</h1> <p class="text-gray-300 text-lg max-w-2xl">${b.subtitle}</p> </div> </div> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20"> <!-- Intro --> <div class="max-w-3xl reveal"> <p class="text-gray-700 text-lg leading-relaxed">${b.intro}</p> </div> <!-- Features grid --> <section class="reveal"> <h2 class="section-title">${b.features_title}</h2> <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"> ${b.features.map((feature, i) => renderTemplate`<div${addAttribute(`reveal delay-${(i + 1) * 100} group bg-white rounded-2xl p-7 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300`, "class")}> <div class="w-12 h-12 rounded-xl bg-navy-700/10 flex items-center justify-center mb-5 group-hover:bg-gold/20 transition-colors"> <svg class="w-6 h-6 text-navy group-hover:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"${addAttribute(featureIcons[feature.title] || defaultIcon, "d")}></path> </svg> </div> <h3 class="font-heading font-bold text-navy mb-2">${feature.title}</h3> <p class="text-gray-500 text-sm leading-relaxed">${feature.description}</p> </div>`)} </div> </section> <!-- Eligibility --> <section class="reveal bg-cream rounded-2xl p-8 md:p-12"> <div class="grid md:grid-cols-2 gap-10 items-center"> <div> <h2 class="text-2xl font-heading font-bold text-navy mb-4">${b.eligibility_title}</h2> <p class="text-gray-700 leading-relaxed">${b.eligibility}</p> </div> <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100"> <h3 class="font-heading font-bold text-navy mb-4 text-lg">Quick Facts</h3> <ul class="space-y-3"> ${[
+    "Open from Primary school upwards",
+    "Boys and girls welcome",
+    "Boarding and day options available",
+    "Parents receive weekly updates",
+    "All nationalities welcome",
+    "CCTV cameras monitoring campus 24/7"
+  ].map((fact) => renderTemplate`<li class="flex items-center gap-3 text-sm text-gray-700"> <svg class="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"> <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path> </svg> ${fact} </li>`)} </ul> </div> </div> </section> <!-- CTA --> <section class="reveal text-center bg-navy-700 rounded-3xl py-14 px-8 relative overflow-hidden"> <div class="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-gold/10 blur-3xl"></div> <div class="relative"> <h2 class="text-3xl font-heading font-bold text-white mb-3">${b.cta_title}</h2> <p class="text-gray-400 mb-8 max-w-xl mx-auto">${b.cta_subtitle}</p> <div class="flex flex-col sm:flex-row gap-4 justify-center"> <a${addAttribute(`/${lang}/admissions`, "href")} class="btn-primary text-base"> ${b.enquire_button} </a> <a${addAttribute(`/${lang}/contact`, "href")} class="btn-secondary text-base">
+Book a Campus Visit
+</a> </div> </div> </section> </div> ` })}`;
+}, "/home/kash/Desktop/LINVOY/website/pro/src/pages/en/boarding.astro", void 0);
+
+const $$file = "/home/kash/Desktop/LINVOY/website/pro/src/pages/en/boarding.astro";
+const $$url = "/en/boarding";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Boarding,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

@@ -15,13 +15,13 @@
   },
   "hero": {
     "headline": "Où Chaque Enfant est Aimé, Nourri et Inspiré",
-    "subheadline": "Linvoy Academy  la seule école K9 avec internat au Ghana, offrant un programme aligné GES avec le français comme matière dédiée et des spécialisations en Commerce et Informatique.",
+    "subheadline": "Linvoy Academy  la seule école d'Éducation de Base avec internat au Ghana, offrant un programme aligné GES avec le français comme matière dédiée et des spécialisations en Commerce et Informatique.",
     "cta_programs": "Voir les Programmes",
     "cta_register": "S'inscrire Maintenant"
   },
   "programs_overview": {
     "title": "Ce Que Nous Offrons",
-    "subtitle": "Une éducation K9 complète — de la Maternelle au Collège — avec l'avantage spécialisé dont chaque enfant a besoin.",
+    "subtitle": "Une Éducation de Base complète — de la Maternelle au Collège — avec l'avantage spécialisé dont chaque enfant a besoin.",
     "languages": {
       "title": "Français Langue",
       "description": "Le français enseigné comme matière dédiée de la KG au JHS, donnant à chaque diplômé une vraie maîtrise de l'une des langues les plus importantes d'Afrique de l'Ouest."
@@ -55,7 +55,7 @@
     "title": "Pourquoi les Familles Choisissent Linvoy",
     "subtitle": "Nous sommes la seule école au Ghana à offrir une véritable éducation holistique  où chaque enfant est le bienvenu.",
     "holistic": {
-      "title": "Vraiment Holistique K9",
+      "title": "Vraiment Holistique Éducation de Base",
       "description": "De la Maternelle au Collège dans une seule école — une communauté, des valeurs cohérentes. Développement académique, moral, social et physique, tout en un seul endroit."
     },
     "inclusive": {
@@ -85,14 +85,14 @@
   },
   "cta_banner": {
     "headline": "Offrez à Votre Enfant l'Avantage Linvoy",
-    "subheadline": "Les inscriptions sont ouvertes. Réservez la place de votre enfant dans la seule école K9 holistique avec internat au Ghana.",
+    "subheadline": "Les inscriptions sont ouvertes. Réservez la place de votre enfant dans la seule école d'Éducation de Base holistique avec internat au Ghana.",
     "button": "Postuler pour l'Inscription",
     "secondary": "Réserver une Visite"
   },
   "about": {
     "title": "À Propos de Linvoy Academy",
     "story_title": "Notre Histoire",
-    "story": "Linvoy Academy a été fondée sur une conviction simple mais puissante : chaque enfant mérite d'être aimé, inspiré et d'avoir une vraie chance de réussir. Nous sommes la seule école au Ghana à offrir une véritable éducation K9 holistique  combinant un programme académique rigoureux aligné GES, le français comme matière dédiée à chaque niveau, un internat et un développement du caractère fondé sur des valeurs. Nous accueillons les enfants de toute tribu, religion et nationalité sans exception, car nous croyons que la diversité enrichit chaque classe.",
+    "story": "Linvoy Academy a été fondée sur une conviction simple mais puissante : chaque enfant mérite d'être aimé, inspiré et d'avoir une vraie chance de réussir. Nous sommes la seule école au Ghana à offrir une véritable Éducation de Base holistique  combinant un programme académique rigoureux aligné GES, le français comme matière dédiée à chaque niveau, un internat et un développement du caractère fondé sur des valeurs. Nous accueillons les enfants de toute tribu, religion et nationalité sans exception, car nous croyons que la diversité enrichit chaque classe.",
     "mission_title": "Notre Mission & Vision",
     "mission": "Notre mission est d'obtenir le succès et d'inspirer d'autres à venir pour une éducation sérieuse. Notre vision est un Ghana où chaque enfant  quelle que soit son origine  a accès à une éducation mondiale, aimante et holistique qui façonne non seulement sa carrière, mais aussi son caractère.",
     "values_title": "Nos Valeurs : L·I·N·V·O·Y",
@@ -285,7 +285,7 @@
     }
   },
   "footer": {
-    "tagline": "La seule école K12 holistique avec internat au Ghana  où chaque enfant est aimé, inspiré et a l'opportunité de donner le meilleur de lui-même.",
+    "tagline": "La seule école d'Éducation de Base holistique avec internat au Ghana  où chaque enfant est aimé, inspiré et a l'opportunité de donner le meilleur de lui-même.",
     "quick_links": "Liens Rapides",
     "contact_details": "Coordonnées",
     "follow_us": "Suivez-Nous",

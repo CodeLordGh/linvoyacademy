@@ -15,13 +15,13 @@
   },
   "hero": {
     "headline": "Where Every Child is Loved, Nurtured and Inspired",
-    "subheadline": "Linvoy Academy  Ghana's only holistic K9 boarding school, offering a GES-aligned education with French as a dedicated subject and specialist programmes in Business and Computing.",
+    "subheadline": "Linvoy Academy  Ghana's only holistic Basic Education boarding school, offering a GES-aligned education with French as a dedicated subject and specialist programmes in Business and Computing.",
     "cta_programs": "Explore Programs",
     "cta_register": "Enrol Now"
   },
   "programs_overview": {
     "title": "What We Offer",
-    "subtitle": "A complete K9 education — from Kindergarten through Junior High School — with the specialist edge every child needs.",
+    "subtitle": "A complete Basic Education — from Kindergarten through Junior High School — with the specialist edge every child needs.",
     "languages": {
       "title": "French Language",
       "description": "French taught as a dedicated subject from KG through JHS, giving every graduate a strong command of one of West Africa's most important languages."
@@ -55,7 +55,7 @@
     "title": "Why Families Choose Linvoy",
     "subtitle": "We are the only school in Ghana offering truly holistic education  where every child belongs.",
     "holistic": {
-      "title": "Truly Holistic K9",
+      "title": "Truly Holistic Basic Education",
       "description": "From Kindergarten to Junior High School in one school — one community, one consistent set of values. Academic, moral, social and physical development, all in one place."
     },
     "inclusive": {
@@ -85,14 +85,14 @@
   },
   "cta_banner": {
     "headline": "Give Your Child the Linvoy Advantage",
-    "subheadline": "Enrolment is open. Secure your child's place at Ghana's only holistic K9 boarding school.",
+    "subheadline": "Enrolment is open. Secure your child's place at Ghana's only holistic Basic Education boarding school.",
     "button": "Apply for Enrolment",
     "secondary": "Book a School Tour"
   },
   "about": {
     "title": "About Linvoy Academy",
     "story_title": "Our Story",
-    "story": "Linvoy Academy was founded on a simple but powerful conviction: every child deserves to be loved, inspired and given a real opportunity to succeed. We are Ghana's only school offering truly holistic K9 education  combining a rigorous GES-aligned curriculum, French as a dedicated subject at every level, boarding facilities, and values-based character development. We welcome children of every tribe, religion and nationality without exception, because we believe diversity enriches every classroom.",
+    "story": "Linvoy Academy was founded on a simple but powerful conviction: every child deserves to be loved, inspired and given a real opportunity to succeed. We are Ghana's only school offering truly holistic Basic Education  combining a rigorous GES-aligned curriculum, French as a dedicated subject at every level, boarding facilities, and values-based character development. We welcome children of every tribe, religion and nationality without exception, because we believe diversity enriches every classroom.",
     "mission_title": "Our Mission & Vision",
     "mission": "Our mission is to obtain success and inspire others to come for proper education. Our vision is a Ghana where every child  regardless of background  has access to world-class, loving, holistic education that shapes not just their career but their character.",
     "values_title": "Our Values: L·I·N·V·O·Y",
@@ -285,7 +285,7 @@
     }
   },
   "footer": {
-    "tagline": "Ghana's only holistic K12 boarding school  where every child is loved, inspired and given the opportunity to yield their very best.",
+    "tagline": "Ghana's only holistic Basic Education boarding school  where every child is loved, inspired and given the opportunity to yield their very best.",
     "quick_links": "Quick Links",
     "contact_details": "Contact Details",
     "follow_us": "Follow Us",
