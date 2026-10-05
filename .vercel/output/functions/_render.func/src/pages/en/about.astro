@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslation } from '../../i18n/utils';
+import { sanityClient, QUERIES } from '../../lib/sanity';
+
+const lang = 'en';
+const t = useTranslation(lang);
+
+let staff: any[] = [];
+try {
+  staff = await sanityClient.fetch(QUERIES.allStaff);
+} catch (_) {}
+
+const letters = t.linvoy_meaning.letters;
+---
+
+<BaseLayout lang={lang} title={t.about.title} description="Learn about Linvoy Academy  Ghana's only holistic K12 boarding school.">
+
+  <!-- Page Header -->
+  <div class="bg-navy-700 text-white py-20 relative overflow-hidden -mt-16 pt-32">
+    <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #f0a500 1px, transparent 1px); background-size: 28px 28px;"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">Our Identity</span>
+      <h1 class="text-4xl md:text-5xl font-heading font-bold">{t.about.title}</h1>
+      <p class="text-gray-300 mt-3 text-lg max-w-2xl">Ghana's only holistic K12 boarding school, where every child is loved, nurtured and given the opportunity to excel.</p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+    <!-- Story & Mission -->
+    <div class="grid md:grid-cols-2 gap-12 reveal">
+      <div>
+        <h2 class="text-2xl font-heading font-bold text-navy mb-4">{t.about.story_title}</h2>
+        <p class="text-gray-700 leading-relaxed">{t.about.story}</p>
+      </div>
+      <div>
+        <h2 class="text-2xl font-heading font-bold text-navy mb-4">{t.about.mission_title}</h2>
+        <p class="text-gray-700 leading-relaxed">{t.about.mission}</p>
+      </div>
+    </div>
+
+    <!-- LINVOY Acronym  hero feature -->
+    <section class="reveal">
+      <div class="text-center mb-12">
+        <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">Our Name, Our Promise</span>
+        <h2 class="section-title">{t.linvoy_meaning.title}</h2>
+        <p class="section-subtitle mx-auto">{t.linvoy_meaning.subtitle}</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {letters.map((item, i) => (
+          <div class={`reveal delay-${(i+1)*100} group relative bg-white rounded-3xl p-7 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden`}>
+            <!-- Giant letter watermark -->
+            <span class="absolute -bottom-4 -right-2 text-9xl font-heading font-bold text-navy/5 group-hover:text-gold/10 transition-colors select-none leading-none">
+              {item.letter}
+            </span>
+            <div class="relative">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-4xl font-heading font-bold text-gold leading-none">{item.letter}</span>
+                <span class="text-xl font-heading font-bold text-navy">{item.word}</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Holistic Education -->
+    <section class="reveal bg-navy-700 rounded-3xl p-10 md:p-14 text-white relative overflow-hidden">
+      <div class="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="relative grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">What Sets Us Apart</span>
+          <h2 class="text-3xl font-heading font-bold text-white mb-4">{t.about.holistic_title}</h2>
+          <p class="text-gray-300 leading-relaxed">{t.about.holistic}</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          {(['Academic', 'Social', 'Physical', 'Moral'] as const).map((pillar) => (
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-5 text-center border border-white/10">
+              <div class="text-gold font-heading font-bold text-lg">{pillar}</div>
+              <div class="text-gray-400 text-xs mt-1">Development</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Accreditation -->
+    <div class="bg-cream rounded-2xl p-8 md:p-10 reveal">
+      <h2 class="text-2xl font-heading font-bold text-navy mb-4">{t.about.registration_title}</h2>
+      <p class="text-gray-700 leading-relaxed">{t.about.registration}</p>
+    </div>
+
+    <!-- Staff -->
+    <section class="reveal">
+      <h2 class="text-3xl font-heading font-bold text-navy mb-8">{t.about.staff_title}</h2>
+      {staff.length > 0 ? (
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {staff.map((member: any) => (
+            <div class="card text-center p-6">
+              {member.photoUrl ? (
+                <img
+                  src={`${member.photoUrl}?w=200&fm=webp`}
+                  alt={member.name}
+                  class="w-24 h-24 rounded-full object-cover mx-auto mb-4 ring-4 ring-gold/30"
+                  loading="lazy"
+                />
+              ) : (
+                <div class="w-24 h-24 rounded-full bg-navy-700/10 flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-navy-700">
+                  {member.name?.[0] || '?'}
+                </div>
+              )}
+              <h3 class="font-heading font-bold text-navy">{member.name}</h3>
+              <p class="text-gold text-sm font-semibold mb-2">{member.role}</p>
+              {member.bioEn && <p class="text-gray-600 text-sm leading-relaxed">{member.bioEn}</p>}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p class="text-gray-500 italic">Staff profiles coming soon.</p>
+      )}
+    </section>
+
+    <!-- CTA -->
+    <section class="reveal text-center bg-gold rounded-3xl py-14 px-8 relative overflow-hidden">
+      <div class="absolute -top-10 -right-10 w-52 h-52 rounded-full bg-yellow-300/30"></div>
+      <div class="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-orange-400/20"></div>
+      <div class="relative">
+        <h2 class="text-3xl font-heading font-bold text-navy mb-3">Come and See for Yourself</h2>
+        <p class="text-navy/70 mb-8 max-w-xl mx-auto">We warmly invite all families to visit our campus and experience the Linvoy difference in person.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href={`/${lang}/admissions`} class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-navy text-white font-bold rounded-xl hover:bg-navy-800 transition-all">
+            Apply for Enrolment
+          </a>
+          <a href={`/${lang}/contact`} class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-navy text-navy font-bold rounded-xl hover:bg-navy hover:text-white transition-all">
+            Book a School Tour
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>

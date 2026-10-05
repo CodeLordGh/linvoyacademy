@@ -1,0 +1,36 @@
+/* empty css                                    */
+import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead, b as addAttribute } from '../../chunks/astro/server_DjmVd5Sg.mjs';
+import 'kleur/colors';
+import { $ as $$BaseLayout, u as useTranslation } from '../../chunks/BaseLayout_Bdg7sWwW.mjs';
+import { s as sanityClient, Q as QUERIES } from '../../chunks/sanity_mdzBUkTw.mjs';
+export { renderers } from '../../renderers.mjs';
+
+const $$About = createComponent(async ($$result, $$props, $$slots) => {
+  const lang = "fr";
+  const t = useTranslation(lang);
+  let staff = [];
+  try {
+    staff = await sanityClient.fetch(QUERIES.allStaff);
+  } catch (_) {
+  }
+  const letters = t.linvoy_meaning.letters;
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "lang": lang, "title": t.about.title, "description": "D\xE9couvrez Linvoy Academy  la seule \xE9cole K12 holistique avec internat au Ghana." }, { "default": async ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="bg-navy-700 text-white py-20 relative overflow-hidden -mt-16 pt-32"> <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, #f0a500 1px, transparent 1px); background-size: 28px 28px;"></div> <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">Notre Identité</span> <h1 class="text-4xl md:text-5xl font-heading font-bold">${t.about.title}</h1> <p class="text-gray-300 mt-3 text-lg max-w-2xl">La seule école K12 holistique avec internat au Ghana, où chaque enfant est aimé, nourri et a l'opportunité d'exceller.</p> </div> </div> <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20"> <div class="grid md:grid-cols-2 gap-12 reveal"> <div> <h2 class="text-2xl font-heading font-bold text-navy mb-4">${t.about.story_title}</h2> <p class="text-gray-700 leading-relaxed">${t.about.story}</p> </div> <div> <h2 class="text-2xl font-heading font-bold text-navy mb-4">${t.about.mission_title}</h2> <p class="text-gray-700 leading-relaxed">${t.about.mission}</p> </div> </div> <!-- LINVOY Acronym --> <section class="reveal"> <div class="text-center mb-12"> <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">Notre Nom, Notre Promesse</span> <h2 class="section-title">${t.linvoy_meaning.title}</h2> <p class="section-subtitle mx-auto">${t.linvoy_meaning.subtitle}</p> </div> <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"> ${letters.map((item, i) => renderTemplate`<div${addAttribute(`reveal delay-${(i + 1) * 100} group relative bg-white rounded-3xl p-7 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden`, "class")}> <span class="absolute -bottom-4 -right-2 text-9xl font-heading font-bold text-navy/5 group-hover:text-gold/10 transition-colors select-none leading-none"> ${item.letter} </span> <div class="relative"> <div class="flex items-center gap-3 mb-3"> <span class="text-4xl font-heading font-bold text-gold leading-none">${item.letter}</span> <span class="text-xl font-heading font-bold text-navy">${item.word}</span> </div> <p class="text-gray-600 text-sm leading-relaxed">${item.description}</p> </div> </div>`)} </div> </section> <!-- Holistic --> <section class="reveal bg-navy-700 rounded-3xl p-10 md:p-14 text-white relative overflow-hidden"> <div class="absolute -top-10 -right-10 w-60 h-60 rounded-full bg-gold/10 blur-3xl"></div> <div class="relative grid md:grid-cols-2 gap-10 items-center"> <div> <span class="inline-block text-gold font-semibold text-sm uppercase tracking-widest mb-3">Ce Qui Nous Distingue</span> <h2 class="text-3xl font-heading font-bold text-white mb-4">${t.about.holistic_title}</h2> <p class="text-gray-300 leading-relaxed">${t.about.holistic}</p> </div> <div class="grid grid-cols-2 gap-4"> ${["Acad\xE9mique", "Social", "Physique", "Moral"].map((pillar) => renderTemplate`<div class="bg-white/10 backdrop-blur rounded-2xl p-5 text-center border border-white/10"> <div class="text-gold font-heading font-bold text-lg">${pillar}</div> <div class="text-gray-400 text-xs mt-1">Développement</div> </div>`)} </div> </div> </section> <div class="bg-cream rounded-2xl p-8 md:p-10 reveal"> <h2 class="text-2xl font-heading font-bold text-navy mb-4">${t.about.registration_title}</h2> <p class="text-gray-700 leading-relaxed">${t.about.registration}</p> </div> <section class="reveal"> <h2 class="text-3xl font-heading font-bold text-navy mb-8">${t.about.staff_title}</h2> ${staff.length > 0 ? renderTemplate`<div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"> ${staff.map((member) => renderTemplate`<div class="card text-center p-6"> ${member.photoUrl ? renderTemplate`<img${addAttribute(`${member.photoUrl}?w=200&fm=webp`, "src")}${addAttribute(member.name, "alt")} class="w-24 h-24 rounded-full object-cover mx-auto mb-4 ring-4 ring-gold/30" loading="lazy">` : renderTemplate`<div class="w-24 h-24 rounded-full bg-navy-700/10 flex items-center justify-center mx-auto mb-4 text-3xl font-bold text-navy-700"> ${member.name?.[0] || "?"} </div>`} <h3 class="font-heading font-bold text-navy">${member.name}</h3> <p class="text-gold text-sm font-semibold mb-2">${member.role}</p> ${member.bioFr && renderTemplate`<p class="text-gray-600 text-sm leading-relaxed">${member.bioFr}</p>`} </div>`)} </div>` : renderTemplate`<p class="text-gray-500 italic">Profils de l'équipe à venir.</p>`} </section> <section class="reveal text-center bg-gold rounded-3xl py-14 px-8 relative overflow-hidden"> <div class="absolute -top-10 -right-10 w-52 h-52 rounded-full bg-yellow-300/30"></div> <div class="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-orange-400/20"></div> <div class="relative"> <h2 class="text-3xl font-heading font-bold text-navy mb-3">Venez Voir par Vous-Même</h2> <p class="text-navy/70 mb-8 max-w-xl mx-auto">Nous invitons chaleureusement toutes les familles à visiter notre campus et vivre la différence Linvoy en personne.</p> <div class="flex flex-col sm:flex-row gap-4 justify-center"> <a${addAttribute(`/${lang}/admissions`, "href")} class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-navy text-white font-bold rounded-xl hover:bg-navy-800 transition-all">
+Postuler pour l'Inscription
+</a> <a${addAttribute(`/${lang}/contact`, "href")} class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-navy text-navy font-bold rounded-xl hover:bg-navy hover:text-white transition-all">
+Réserver une Visite
+</a> </div> </div> </section> </div> ` })}`;
+}, "/home/kash/Desktop/LINVOY/website/pro/src/pages/fr/about.astro", void 0);
+
+const $$file = "/home/kash/Desktop/LINVOY/website/pro/src/pages/fr/about.astro";
+const $$url = "/fr/about";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$About,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

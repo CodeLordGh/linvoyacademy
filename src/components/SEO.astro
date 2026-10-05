@@ -1,0 +1,168 @@
+---
+import { useTranslation } from '../i18n/utils';
+
+interface Props {
+  lang: string;
+  title: string;
+  description: string;
+  ogImage?: string;
+  url?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  noIndex?: boolean;
+  noFollow?: boolean;
+}
+
+const {
+  lang,
+  title,
+  description,
+  ogImage = '/images/logo.jpeg',
+  url,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Linvoy Academy',
+  section,
+  tags = [],
+  noIndex = false,
+  noFollow = false,
+} = Astro.props;
+
+const t = useTranslation(lang);
+const canonicalUrl = url || `https://linvoyacademy.com/${lang}${Astro.url.pathname}`;
+const siteName = 'Linvoy Academy';
+const designer = 'Mawuena Kossi Baboh';
+const designerUrl = 'https://github.com/mawuenakossibaboh';
+
+const locales = {
+  en: { locale: 'en_GB', alt: 'fr' },
+  fr: { locale: 'fr_FR', alt: 'en' },
+};
+const currentLocale = locales[lang as keyof typeof locales] || locales.en;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': type === 'article' ? 'NewsArticle' : 'WebSite',
+  name: siteName,
+  url: 'https://linvoyacademy.com',
+  logo: 'https://linvoyacademy.com/images/logo.jpeg',
+  description: t.hero?.subheadline || description,
+  author: {
+    '@type': 'Organization',
+    name: siteName,
+    url: 'https://linvoyacademy.com',
+    logo: 'https://linvoyacademy.com/images/logo.jpeg',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: siteName,
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://linvoyacademy.com/images/logo.jpeg',
+    },
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://linvoyacademy.com/{lang}/search?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+  inLanguage: lang,
+  ...(type === 'article' && {
+    headline: title,
+    datePublished: publishedTime,
+    dateModified: modifiedTime || publishedTime,
+    author: {
+      '@type': 'Organization',
+      name: author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://linvoyacademy.com/images/logo.jpeg',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+    },
+    articleSection: section,
+    keywords: tags.join(', '),
+  }),
+  ...(type === 'website' && {
+    '@type': 'WebSite',
+    name: siteName,
+    alternateName: 'Linvoy Academy Ghana',
+    description: t.hero?.subheadline || description,
+    url: 'https://linvoyacademy.com',
+  }),
+};
+---
+
+<!-- Primary Meta Tags -->
+<title>{title} | Linvoy Academy</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={['Linvoy Academy', 'Ghana', 'K12', 'Boarding School', 'French', 'Business', 'Computing', 'Education', ...tags].join(', ')} />
+<meta name="author" content={author} />
+<meta name="designer" content={designer} />
+<meta name="developer" content={designer} />
+<meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Alternate language versions for hreflang -->
+<link rel="alternate" hreflang="en" href={`https://linvoyacademy.com/en${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`} />
+<link rel="alternate" hreflang="fr" href={`https://linvoyacademy.com/fr${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`} />
+<link rel="alternate" hreflang="x-default" href="https://linvoyacademy.com/" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={`https://linvoyacademy.com${ogImage}`} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={title} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content={currentLocale.locale} />
+<meta property="og:locale:alternate" content={locales[currentLocale.alt as keyof typeof locales].locale} />
+{type === 'article' && (
+  <>
+    <meta property="article:published_time" content={publishedTime || ''} />
+    <meta property="article:modified_time" content={modifiedTime || publishedTime || ''} />
+    <meta property="article:author" content={author} />
+    <meta property="article:section" content={section || ''} />
+    {tags.map(tag => <meta property="article:tag" content={tag} />)}
+  </>
+)}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={`https://linvoyacademy.com${ogImage}`} />
+<meta name="twitter:image:alt" content={title} />
+<meta name="twitter:site" content="@linvoyacademy" />
+<meta name="twitter:creator" content="@mawuenakossibaboh" />
+
+<!-- Additional SEO -->
+<meta name="theme-color" content="#1a2e6e" />
+<meta name="color-scheme" content="light" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="dns-prefetch" href="https://cdn.sanity.io" />
+<link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd, null, 2)} />

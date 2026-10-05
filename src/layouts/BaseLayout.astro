@@ -1,0 +1,162 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import SEO from '../components/SEO.astro';
+import { sanityClient, QUERIES } from '../lib/sanity';
+
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  lang: string;
+  url?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  noIndex?: boolean;
+  noFollow?: boolean;
+}
+
+const {
+  title,
+  description = 'Linvoy Academy  Business, Languages and Computing institute in Ghana.',
+  ogImage,
+  lang,
+  url,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Linvoy Academy',
+  section,
+  tags = [],
+  noIndex = false,
+  noFollow = false,
+} = Astro.props;
+
+let settings: any = null;
+try {
+  settings = await sanityClient.fetch(QUERIES.siteSettings);
+} catch (_) {}
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || 'https://linvoyacademy.com';
+---
+
+<!doctype html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Component handles all meta tags, Open Graph, Twitter Cards, JSON-LD -->
+    <SEO
+      lang={lang}
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      url={url}
+      type={type}
+      publishedTime={publishedTime}
+      modifiedTime={modifiedTime}
+      author={author}
+      section={section}
+      tags={tags}
+      noIndex={noIndex}
+      noFollow={noFollow}
+    />
+
+    <!-- Fonts with preload for performance -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" />
+    </noscript>
+
+    <!-- Critical CSS hint: start body invisible until fonts settle -->
+    <style>
+      /* Prevent flash of unstyled content */
+      html { opacity: 0; }
+      html.ready { opacity: 1; transition: opacity 0.25s ease; }
+    </style>
+  </head>
+
+  <body class="flex flex-col min-h-screen">
+    <!-- Page transition overlay  slides away on load -->
+    <div
+      id="page-curtain"
+      aria-hidden="true"
+      style="position:fixed;inset:0;z-index:9999;background:#1a2e6e;
+             animation: curtain-exit 0.55s 0.1s cubic-bezier(0.76,0,0.24,1) both;"
+    ></div>
+
+    <Header lang={lang} settings={settings} />
+
+    <main id="main-content" class="flex-1 pt-16">
+      <slot />
+    </main>
+
+    <Footer lang={lang} settings={settings} />
+    <WhatsAppButton lang={lang} settings={settings} />
+  </body>
+</html>
+
+<!-- Global animation scripts -->
+<script>
+  // 1. Mark html ready -> triggers opacity transition (prevents FOUC)
+  document.documentElement.classList.add('ready');
+
+  // 2. Scroll-reveal via IntersectionObserver (available on all pages)
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const el   = entry.target as HTMLElement;
+        const delay = el.dataset.delay ? parseInt(el.dataset.delay) : 0;
+        setTimeout(() => {
+          el.classList.add('visible');
+          revealObserver.unobserve(el);
+        }, delay);
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+    .forEach((el, i) => {
+      // Auto-stagger siblings that share a parent grid/flex container
+      const siblings = el.parentElement?.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+      if (siblings && siblings.length > 1) {
+        const idx = Array.from(siblings).indexOf(el);
+        (el as HTMLElement).dataset.delay = String(idx * 90);
+      }
+      revealObserver.observe(el);
+    });
+
+  // 3. Ripple on all buttons (catches dynamically added ones via delegation)
+  document.addEventListener('click', (e: MouseEvent) => {
+    const target = (e.target as HTMLElement).closest(
+      '.btn-primary, .btn-secondary, .btn-outline, [data-ripple]'
+    ) as HTMLElement | null;
+    if (!target) return;
+
+    const rect  = target.getBoundingClientRect();
+    const span  = document.createElement('span');
+    span.className = 'ripple-wave';
+    span.style.left = (e.clientX - rect.left - 20) + 'px';
+    span.style.top  = (e.clientY - rect.top  - 20) + 'px';
+    target.appendChild(span);
+    span.addEventListener('animationend', () => span.remove(), { once: true });
+  });
+</script>
+
+<!-- Curtain keyframe must be in a global style block -->
+<style is:global>
+  @keyframes curtain-exit {
+    from { transform: translateY(0);     opacity: 1; }
+    to   { transform: translateY(-100%); opacity: 0; }
+  }
+</style>

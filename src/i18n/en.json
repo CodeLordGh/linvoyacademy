@@ -1,0 +1,297 @@
+{
+  "lang": "en",
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "programs": "Programs",
+    "boarding": "Boarding",
+    "admissions": "Admissions",
+    "fees": "Fees",
+    "gallery": "Gallery",
+    "news": "News",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Where Every Child is Loved, Nurtured and Inspired",
+    "subheadline": "Linvoy Academy  Ghana's only holistic K9 boarding school, offering a GES-aligned education with French as a dedicated subject and specialist programmes in Business and Computing.",
+    "cta_programs": "Explore Programs",
+    "cta_register": "Enrol Now"
+  },
+  "programs_overview": {
+    "title": "What We Offer",
+    "subtitle": "A complete K9 education — from Kindergarten through Junior High School — with the specialist edge every child needs.",
+    "languages": {
+      "title": "French Language",
+      "description": "French taught as a dedicated subject from KG through JHS, giving every graduate a strong command of one of West Africa's most important languages."
+    },
+    "business": {
+      "title": "Business & Entrepreneurship",
+      "description": "Real-world business, accounting and entrepreneurship skills woven into the curriculum from Primary through JHS to prepare students for tomorrow's economy."
+    },
+    "computing": {
+      "title": "Computing & ICT",
+      "description": "Digital literacy, coding and IT fundamentals taught from Basic 1 upwards, aligned to the NaCCA curriculum so technology becomes second nature."
+    },
+    "security": {
+      "title": "Campus Security — CCTV 24/7",
+      "description": "Every corner of our campus is covered by CCTV cameras operating around the clock. Parents can rest assured their child is always safe."
+    }
+  },
+  "linvoy_meaning": {
+    "title": "What LINVOY Means",
+    "subtitle": "Every letter of our name is a promise we make to every child who walks through our doors.",
+    "letters": [
+      { "letter": "L", "word": "Love",        "description": "We lead with love. Every child is seen, valued and cherished unconditionally." },
+      { "letter": "I", "word": "Inspire",      "description": "We ignite curiosity and ambition, showing each student what they are capable of." },
+      { "letter": "N", "word": "Nurture",      "description": "We grow the whole child  mind, character and confidence  not just academics." },
+      { "letter": "V", "word": "Vision",       "description": "We help students see far beyond their present circumstances into a bright future." },
+      { "letter": "O", "word": "Opportunity",  "description": "We open doors for children of every tribe, religion and nationality, no exceptions." },
+      { "letter": "Y", "word": "Yield",        "description": "We produce graduates who are ready  for university, for work, for life." }
+    ]
+  },
+  "why_linvoy": {
+    "title": "Why Families Choose Linvoy",
+    "subtitle": "We are the only school in Ghana offering truly holistic education  where every child belongs.",
+    "holistic": {
+      "title": "Truly Holistic K9",
+      "description": "From Kindergarten to Junior High School in one school — one community, one consistent set of values. Academic, moral, social and physical development, all in one place."
+    },
+    "inclusive": {
+      "title": "All Are Welcome",
+      "description": "Children of every tribe, religion and nationality are always welcome. No exceptions. Our diversity is our strength."
+    },
+    "bilingual": {
+      "title": "French as a Subject",
+      "description": "French is taught as a dedicated subject at every level — KG through JHS — giving graduates a real command of one of West Africa's most widely spoken languages."
+    },
+    "boarding": {
+      "title": "Safe Boarding",
+      "description": "Qualified house parents, structured study time and healthy meals — a caring, supervised home away from home for students from across Ghana."
+    },
+    "cctv": {
+      "title": "Campus-Wide CCTV 24/7",
+      "description": "Every corner of our campus is monitored by CCTV cameras operating 24 hours a day, 7 days a week. Your child's safety is never left to chance."
+    }
+  },
+  "testimonials_preview": {
+    "title": "What Families Say",
+    "view_all": "Read All Stories"
+  },
+  "news_preview": {
+    "title": "Latest News & Events",
+    "view_all": "View All News"
+  },
+  "cta_banner": {
+    "headline": "Give Your Child the Linvoy Advantage",
+    "subheadline": "Enrolment is open. Secure your child's place at Ghana's only holistic K9 boarding school.",
+    "button": "Apply for Enrolment",
+    "secondary": "Book a School Tour"
+  },
+  "about": {
+    "title": "About Linvoy Academy",
+    "story_title": "Our Story",
+    "story": "Linvoy Academy was founded on a simple but powerful conviction: every child deserves to be loved, inspired and given a real opportunity to succeed. We are Ghana's only school offering truly holistic K9 education  combining a rigorous GES-aligned curriculum, French as a dedicated subject at every level, boarding facilities, and values-based character development. We welcome children of every tribe, religion and nationality without exception, because we believe diversity enriches every classroom.",
+    "mission_title": "Our Mission & Vision",
+    "mission": "Our mission is to obtain success and inspire others to come for proper education. Our vision is a Ghana where every child  regardless of background  has access to world-class, loving, holistic education that shapes not just their career but their character.",
+    "values_title": "Our Values: L·I·N·V·O·Y",
+    "registration_title": "Registration & Accreditation",
+    "registration": "Linvoy Academy is a duly registered educational institution in the Republic of Ghana. Our curriculum meets national standards set by the Ghana Education Service (GES), and our qualifications are recognised across the country.",
+    "staff_title": "Meet Our Team",
+    "holistic_title": "Holistic Education",
+    "holistic": "We go beyond books. At Linvoy, education means developing the whole child  academically through our rigorous bilingual curriculum, socially through a diverse and inclusive community, physically through sport and activity, and morally through our core values. No other school in Ghana offers this complete package."
+  },
+  "boarding": {
+    "title": "Boarding at Linvoy Academy",
+    "subtitle": "A safe, nurturing home away from home for students from across Ghana and beyond.",
+    "intro": "Our boarding facility is designed with one priority above all others: your child's safety, happiness and growth. Supervised by caring staff around the clock, our boarders enjoy structured study time, healthy meals, recreational activities and a close-knit community that becomes a second family.",
+    "features_title": "Life at the Boarding House",
+    "features": [
+      { "title": "24/7 Supervision",     "description": "Qualified house parents and security staff on site at all times, day and night." },
+      { "title": "Healthy Meals",        "description": "Three nutritious meals a day prepared fresh on campus, with dietary needs accommodated." },
+      { "title": "Structured Study",     "description": "Dedicated quiet study hours every evening supported by teachers on duty." },
+      { "title": "Recreational Time",    "description": "Sports, games, arts and social activities to ensure a balanced, joyful life." },
+      { "title": "Pastoral Care",        "description": "Regular check-ins, counselling support and open communication with parents." },
+      { "title": "Safe & Clean Rooms",   "description": "Comfortable, well-maintained dormitories with secure storage for personal belongings." }
+    ],
+    "eligibility_title": "Who Can Board?",
+    "eligibility": "Boarding is open to all enrolled Linvoy Academy students from Primary school upwards. We welcome both day students transitioning to boarding and new students joining as boarders.",
+    "enquire_button": "Enquire About Boarding",
+    "cta_title": "Interested in Boarding?",
+    "cta_subtitle": "Contact us to arrange a visit or to receive our boarding prospectus."
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "A GES-aligned curriculum from Kindergarten through Junior High School — with French taught as a dedicated subject and specialist strands in Languages, Business and Computing.",
+    "filter_all": "All",
+    "filter_languages": "Languages",
+    "filter_business": "Business",
+    "filter_computing": "Computing",
+    "level_label": "Level",
+    "duration": "Duration",
+    "fees": "Fees",
+    "schedule": "Schedule",
+    "apply_now": "Apply Now",
+    "no_courses": "Full programme details coming soon. Contact us for the current prospectus.",
+    "levels_intro_title": "Our School Levels",
+    "levels": [
+      {
+        "key": "kindergarten",
+        "label": "Kindergarten",
+        "grades": "KG 1 – KG 2",
+        "ages": "Ages 4–5",
+        "years": "2 years",
+        "description": "A nurturing, play-based start to learning. Children develop early literacy and numeracy in English, with French introduced as a fun, dedicated language subject from day one.",
+        "highlights": ["French taught as a subject from KG 1", "Play-based, hands-on learning", "Social & emotional development", "Morning & afternoon sessions available"]
+      },
+      {
+        "key": "primary",
+        "label": "Primary School",
+        "grades": "Basic 1 – Basic 6",
+        "ages": "Ages 6–11",
+        "years": "6 years",
+        "description": "Six years of solid academic grounding aligned to the Ghana Education Service (GES) curriculum. All core subjects are taught in English, with French as a dedicated subject class throughout all six years.",
+        "highlights": ["Full GES-aligned curriculum", "French as a dedicated subject — all years", "Computing & digital literacy from Basic 1", "Business awareness integrated across subjects"]
+      },
+      {
+        "key": "junior_high",
+        "label": "Junior High School (JHS)",
+        "grades": "JHS 1 – JHS 3",
+        "ages": "Ages 12–14",
+        "years": "3 years (BECE)",
+        "description": "Three years preparing students for the Basic Education Certificate Examination (BECE). Students study a full range of GES subjects in English, with French as a dedicated BECE subject, plus Business and Computing strands.",
+        "highlights": ["Full BECE preparation (all GES core subjects)", "French as a BECE subject", "Business & Entrepreneurship elective", "Computing & ICT throughout all three years", "Boarding available from JHS 1"]
+      }
+    ]
+  },
+  "admissions": {
+    "title": "Admissions",
+    "subtitle": "We welcome children of every background. Fill in this form and our admissions team will be in touch within 48 hours.",
+    "requirements_title": "Admission Requirements",
+    "requirements": [
+      "Open to children from Kindergarten (age ~4) through Junior High School",
+      "Previous school report or academic record (where applicable)",
+      "Child's birth certificate or valid ID",
+      "Parent or guardian national ID",
+      "Completed enrolment form below",
+      "Optional: school tour  we strongly encourage families to visit us"
+    ],
+    "form": {
+      "student_name": "Student's Full Name",
+      "date_of_birth": "Date of Birth",
+      "grade_applying": "Grade / Class Applying For",
+      "grade_placeholder": "e.g. KG1, Primary 3, JHS 1…",
+      "parent_name": "Parent / Guardian Full Name",
+      "email": "Parent / Guardian Email",
+      "phone": "Parent / Guardian Phone",
+      "nationality": "Student Nationality",
+      "boarding": "Boarding Required?",
+      "boarding_yes": "Yes  boarding place needed",
+      "boarding_no": "No  day student",
+      "program": "Program / Subject of Interest (optional)",
+      "program_placeholder": "Select a program",
+      "message": "Additional Message (optional)",
+      "submit": "Submit Enrolment Application",
+      "submitting": "Submitting…",
+      "success": "Thank you! Your application has been received. Our admissions team will contact you within 48 hours.",
+      "error": "Something went wrong. Please try again or contact us directly.",
+      "validation": {
+        "required": "This field is required.",
+        "email": "Please enter a valid email address."
+      }
+    }
+  },
+  "fees": {
+    "title": "Fees & Payment",
+    "subtitle": "Transparent, accessible fees for every family. All fees are per term (3 terms per academic year).",
+    "table_program": "Program / Level",
+    "table_duration": "Duration",
+    "table_fee": "Tuition Fee (per term)",
+    "boarding_fee_note": "Boarding fees (accommodation, meals & supervision) are charged separately from tuition. Contact us for the full boarding fee schedule.",
+    "contact_for_pricing": "Contact us for pricing",
+    "terms_note": "The academic year runs 3 terms. Fees shown are per term. A one-time registration/enrolment fee applies on first entry.",
+    "registration_fee_label": "Registration Fee (one-time)",
+    "registration_fee_value": "Contact us",
+    "static_fee_table": [
+      { "level": "Kindergarten (KG 1 – KG 2)", "ages": "Ages 4–5", "duration": "2 years", "fee": "Contact us" },
+      { "level": "Primary School (Basic 1 – 6)", "ages": "Ages 6–11", "duration": "6 years", "fee": "Contact us" },
+      { "level": "Junior High School (JHS 1 – 3)", "ages": "Ages 12–14", "duration": "3 years (BECE)", "fee": "Contact us" }
+    ],
+    "boarding_row_label": "Boarding (per term, any level)",
+    "boarding_row_fee": "Contact us",
+    "what_included_title": "What's Included in Tuition",
+    "what_included": [
+      "All GES-aligned academic subjects (English, Mathematics, Science, Social Studies, Computing, Creative Arts, P.E.)",
+      "French taught as a dedicated subject at every level",
+      "School books and learning materials",
+      "Access to all school facilities and activities",
+      "Progress reports each term"
+    ],
+    "payment_title": "Payment Methods",
+    "payment_subtitle": "We accept Mobile Money, bank transfer, and online payment for your convenience.",
+    "mobile_money_title": "Mobile Money",
+    "mobile_money_networks": ["MTN Mobile Money", "Telecel Cash (Vodafone)", "AirtelTigo Money"],
+    "bank_title": "Bank Transfer",
+    "bank_placeholder": "Bank details provided upon enrolment confirmation. Contact our admissions office for details.",
+    "paystack_button": "Pay Online with Paystack"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "A glimpse into the vibrant life at Linvoy Academy.",
+    "no_items": "Photos and videos coming soon. Check back soon."
+  },
+  "news": {
+    "title": "News & Events",
+    "subtitle": "Stay up to date with everything happening at Linvoy Academy.",
+    "no_posts": "News articles coming soon.",
+    "read_more": "Read More",
+    "back": "← Back to News"
+  },
+  "testimonials": {
+    "title": "Family Testimonials",
+    "subtitle": "Hear from the parents and students who are part of the Linvoy family.",
+    "no_testimonials": "Testimonials coming soon."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything parents and students want to know about Linvoy Academy.",
+    "no_items": "FAQs coming soon.",
+    "contact_cta": "Still have questions? We are happy to help.",
+    "contact_link": "Contact Us"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We would love to hear from you. Reach out by phone, WhatsApp, email, or the form below  we are always happy to talk.",
+    "address_label": "Address",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "whatsapp_button": "Chat on WhatsApp",
+    "map_placeholder": "Campus map coming soon.",
+    "tour_note": "We warmly invite all prospective families to visit our campus. Contact us to arrange a school tour.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "submitting": "Sending…",
+      "success": "Thank you! Your message has been received. We will get back to you shortly.",
+      "error": "Something went wrong. Please try again or contact us directly.",
+      "validation": {
+        "required": "This field is required.",
+        "email": "Please enter a valid email address."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Ghana's only holistic K12 boarding school  where every child is loved, inspired and given the opportunity to yield their very best.",
+    "quick_links": "Quick Links",
+    "contact_details": "Contact Details",
+    "follow_us": "Follow Us",
+    "copyright": "© {year} Linvoy Academy. All rights reserved."
+  },
+  "whatsapp_label": "Chat on WhatsApp",
+  "loading": "Loading…",
+  "error_generic": "An error occurred. Please try again."
+}

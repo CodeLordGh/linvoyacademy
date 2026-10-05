@@ -1,0 +1,237 @@
+---
+import { useTranslation, switchLocaleUrl } from '../i18n/utils';
+import type { Locale } from '../i18n/utils';
+
+export interface Props {
+  lang: string;
+  settings?: any;
+}
+
+const { lang } = Astro.props;
+const t = useTranslation(lang);
+const l = lang as Locale;
+const pathname = Astro.url.pathname;
+
+const navLinks = [
+  { key: 'home',       href: `/${l}/` },
+  { key: 'about',      href: `/${l}/about` },
+  { key: 'programs',   href: `/${l}/programs` },
+  { key: 'boarding',   href: `/${l}/boarding` },
+  { key: 'admissions', href: `/${l}/admissions` },
+  { key: 'fees',       href: `/${l}/fees` },
+  { key: 'gallery',    href: `/${l}/gallery` },
+  { key: 'news',       href: `/${l}/news` },
+  { key: 'contact',    href: `/${l}/contact` },
+] as const;
+
+const otherLang = l === 'en' ? 'fr' : 'en';
+const toggleUrl = switchLocaleUrl(pathname, otherLang);
+
+function isActive(href: string) {
+  if (href === `/${l}/`) return pathname === href || pathname === `/${l}`;
+  return pathname.startsWith(href);
+}
+---
+
+<header
+  id="site-header"
+  class="animate-header fixed top-0 left-0 right-0 z-50 bg-transparent border-b border-transparent transition-all duration-300"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- ── Logo ── -->
+      <a
+        href={`/${l}/`}
+        class="flex items-center gap-3 flex-shrink-0 group"
+        aria-label="Linvoy Academy  Home"
+      >
+        <div class="relative">
+          <!-- Glow ring animates on hover -->
+          <span class="absolute inset-0 rounded-full bg-gold/20 scale-0 group-hover:scale-110 transition-transform duration-400 ease-out"></span>
+          <img
+            src="/images/logo.jpeg"
+            alt="Linvoy Academy"
+            width="40"
+            height="40"
+            class="relative rounded-full object-cover ring-2 ring-gold group-hover:ring-gold-300 transition-all duration-300"
+          />
+        </div>
+        <span class="text-white font-heading font-bold text-lg leading-tight hidden sm:block">
+          <span class="group-hover:text-gold transition-colors duration-200">Linvoy</span>
+          <br /><span class="text-gold text-sm font-semibold">Academy</span>
+        </span>
+      </a>
+
+      <!-- ── Desktop Nav ── -->
+      <nav class="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
+        {navLinks.map(({ key, href }, i) => (
+          <a
+            href={href}
+            class:list={[
+              isActive(href) ? 'nav-link nav-link-active' : 'nav-link',
+              `animate-rise delay-${(i + 1) * 50}`,
+            ]}
+            aria-current={isActive(href) ? 'page' : undefined}
+            data-ripple
+          >
+            {t.nav[key as keyof typeof t.nav]}
+          </a>
+        ))}
+      </nav>
+
+      <!-- ── Right side: lang toggle + hamburger ── -->
+      <div class="flex items-center gap-3">
+
+        <!-- Language toggle -->
+        <a
+          href={toggleUrl}
+          class="lang-toggle animate-rise delay-500"
+          aria-label={`Switch to ${otherLang === 'fr' ? 'French' : 'English'}`}
+        >
+          <!-- Globe icon -->
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+          {otherLang.toUpperCase()}
+        </a>
+
+        <!-- Hamburger  animates into X via CSS -->
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+          class="lg:hidden relative w-9 h-9 flex flex-col items-center justify-center gap-[5px] rounded-lg
+                 hover:bg-white/10 active:bg-white/20 transition-colors duration-200 p-2"
+        >
+          <span class="hamburger-bar w-5 h-[2px] bg-white rounded-full transition-all duration-300 origin-center"></span>
+          <span class="hamburger-bar w-5 h-[2px] bg-white rounded-full transition-all duration-300"></span>
+          <span class="hamburger-bar w-5 h-[2px] bg-white rounded-full transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Mobile Menu ── -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden overflow-hidden"
+    style="max-height: 0; transition: max-height 0.35s cubic-bezier(0.22,1,0.36,1);"
+    aria-hidden="true"
+  >
+    <nav class="bg-navy-800/95 backdrop-blur-md border-t border-white/10 px-4 py-3 space-y-1" aria-label="Mobile navigation">
+      {navLinks.map(({ key, href }) => (
+        <a
+          href={href}
+          class:list={[
+            isActive(href) ? 'mobile-nav-link mobile-nav-link-active' : 'mobile-nav-link',
+          ]}
+          aria-current={isActive(href) ? 'page' : undefined}
+        >
+          {t.nav[key as keyof typeof t.nav]}
+        </a>
+      ))}
+      <!-- Lang toggle in mobile -->
+      <div class="pt-2 mt-2 border-t border-white/10">
+        <a href={toggleUrl} class="mobile-nav-link flex items-center gap-2">
+          <svg class="w-4 h-4 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+          </svg>
+          {otherLang === 'fr' ? 'Français' : 'English'}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // ── Mobile menu  smooth max-height expand/collapse ──────────────────────
+  const toggle  = document.getElementById('menu-toggle') as HTMLButtonElement;
+  const menu    = document.getElementById('mobile-menu') as HTMLElement;
+  const bars    = toggle?.querySelectorAll('.hamburger-bar') as NodeListOf<HTMLElement>;
+  let isOpen    = false;
+
+  function openMenu() {
+    isOpen = true;
+    menu.style.maxHeight = menu.scrollHeight + 'px';
+    menu.setAttribute('aria-hidden', 'false');
+    toggle.setAttribute('aria-expanded', 'true');
+    // Animate bars → X
+    bars[0].style.transform = 'translateY(7px) rotate(45deg)';
+    bars[1].style.opacity   = '0';
+    bars[1].style.transform = 'scaleX(0)';
+    bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    menu.style.maxHeight = '0';
+    menu.setAttribute('aria-hidden', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    // Restore bars
+    bars[0].style.transform = '';
+    bars[1].style.opacity   = '';
+    bars[1].style.transform = '';
+    bars[2].style.transform = '';
+  }
+
+  toggle?.addEventListener('click', () => isOpen ? closeMenu() : openMenu());
+
+  // Close when a mobile nav link is clicked
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // ── Ripple effect on nav links + buttons ─────────────────────────────────
+  function attachRipple(el: Element) {
+    el.addEventListener('click', (e: Event) => {
+      const evt   = e as MouseEvent;
+      const rect  = (el as HTMLElement).getBoundingClientRect();
+      const span  = document.createElement('span');
+      span.className = 'ripple-wave';
+      span.style.left = (evt.clientX - rect.left - 20) + 'px';
+      span.style.top  = (evt.clientY - rect.top  - 20) + 'px';
+      el.appendChild(span);
+      span.addEventListener('animationend', () => span.remove());
+    });
+  }
+
+  document.querySelectorAll('[data-ripple], .btn-primary, .btn-secondary, .btn-outline')
+    .forEach(attachRipple);
+
+  // ── Header scroll behaviour  solid bg on scroll ────────────────────────
+  const header = document.getElementById('site-header');
+  let lastY = 0;
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > 10) {
+      header?.classList.add('scrolled');
+      header?.classList.remove('bg-transparent', 'border-transparent');
+      header?.classList.add('bg-navy-700/95', 'backdrop-blur-md', 'shadow-lg', 'border-white/5');
+    } else {
+      header?.classList.remove('scrolled');
+      header?.classList.add('bg-transparent', 'border-transparent');
+      header?.classList.remove('bg-navy-700/95', 'backdrop-blur-md', 'shadow-lg', 'border-white/5');
+    }
+    // Hide on scroll down > 80px, show on scroll up
+    if (y > lastY + 8 && y > 80) {
+      header!.style.transform = 'translateY(-100%)';
+      header!.style.transition = 'transform 0.35s cubic-bezier(0.22,1,0.36,1)';
+    } else if (y < lastY - 4) {
+      header!.style.transform = 'translateY(0)';
+    }
+    lastY = y;
+  }, { passive: true });
+</script>
+
+<style>
+  /* Solid navy background + extra shadow when scrolled */
+  #site-header.scrolled {
+    box-shadow: 0 4px 24px -4px rgba(10, 18, 50, 0.35);
+  }
+</style>

@@ -1,0 +1,297 @@
+{
+  "lang": "fr",
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "programs": "Programmes",
+    "boarding": "Internat",
+    "admissions": "Admissions",
+    "fees": "Frais",
+    "gallery": "Galerie",
+    "news": "Actualités",
+    "testimonials": "Témoignages",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Où Chaque Enfant est Aimé, Nourri et Inspiré",
+    "subheadline": "Linvoy Academy  la seule école K9 avec internat au Ghana, offrant un programme aligné GES avec le français comme matière dédiée et des spécialisations en Commerce et Informatique.",
+    "cta_programs": "Voir les Programmes",
+    "cta_register": "S'inscrire Maintenant"
+  },
+  "programs_overview": {
+    "title": "Ce Que Nous Offrons",
+    "subtitle": "Une éducation K9 complète — de la Maternelle au Collège — avec l'avantage spécialisé dont chaque enfant a besoin.",
+    "languages": {
+      "title": "Français Langue",
+      "description": "Le français enseigné comme matière dédiée de la KG au JHS, donnant à chaque diplômé une vraie maîtrise de l'une des langues les plus importantes d'Afrique de l'Ouest."
+    },
+    "business": {
+      "title": "Commerce & Entrepreneuriat",
+      "description": "Des compétences pratiques en gestion, comptabilité et entrepreneuriat intégrées au programme du Primaire au JHS pour préparer les élèves à l'économie de demain."
+    },
+    "computing": {
+      "title": "Informatique & TIC",
+      "description": "Culture numérique, codage et fondamentaux informatiques enseignés dès le Basic 1, alignés sur le programme NaCCA pour que la technologie devienne une seconde nature."
+    },
+    "security": {
+      "title": "Sécurité Campus — CCTV 24h/24",
+      "description": "Chaque recoin de notre campus est couvert par des caméras CCTV fonctionnant 24h/24, 7j/7. Les parents peuvent avoir la certitude que leur enfant est toujours en sécurité."
+    }
+  },
+  "linvoy_meaning": {
+    "title": "Ce que signifie LINVOY",
+    "subtitle": "Chaque lettre de notre nom est une promesse que nous faisons à chaque enfant qui franchit nos portes.",
+    "letters": [
+      { "letter": "L", "word": "Love (Amour)",          "description": "Nous guidons avec amour. Chaque enfant est vu, valorisé et chéri inconditionnellement." },
+      { "letter": "I", "word": "Inspire",                "description": "Nous éveillons la curiosité et l'ambition, en montrant à chaque élève ce dont il est capable." },
+      { "letter": "N", "word": "Nurture (Épanouir)",     "description": "Nous développons l'enfant tout entier  esprit, caractère et confiance  pas seulement l'académique." },
+      { "letter": "V", "word": "Vision",                 "description": "Nous aidons les élèves à voir bien au-delà de leur situation actuelle vers un avenir brillant." },
+      { "letter": "O", "word": "Opportunity (Opportunité)", "description": "Nous ouvrons des portes pour les enfants de toute tribu, religion et nationalité, sans exception." },
+      { "letter": "Y", "word": "Yield (Produire)",       "description": "Nous formons des diplômés prêts  pour l'université, le travail et la vie." }
+    ]
+  },
+  "why_linvoy": {
+    "title": "Pourquoi les Familles Choisissent Linvoy",
+    "subtitle": "Nous sommes la seule école au Ghana à offrir une véritable éducation holistique  où chaque enfant est le bienvenu.",
+    "holistic": {
+      "title": "Vraiment Holistique K9",
+      "description": "De la Maternelle au Collège dans une seule école — une communauté, des valeurs cohérentes. Développement académique, moral, social et physique, tout en un seul endroit."
+    },
+    "inclusive": {
+      "title": "Tous les Bienvenus",
+      "description": "Les enfants de toute tribu, religion et nationalité sont toujours les bienvenus. Sans exception. Notre diversité est notre force."
+    },
+    "bilingual": {
+      "title": "Français comme Matière",
+      "description": "Le français est enseigné comme matière dédiée à chaque niveau — de la KG au JHS — donnant aux diplômés une vraie maîtrise de l'une des langues les plus parlées d'Afrique de l'Ouest."
+    },
+    "boarding": {
+      "title": "Internat Sécurisé",
+      "description": "Parents de maison qualifiés, heures d'étude structurées et repas sains — un foyer bienveillant et supervisé loin de chez soi pour les élèves venant de tout le Ghana."
+    },
+    "cctv": {
+      "title": "CCTV sur Tout le Campus 24h/24",
+      "description": "Chaque recoin de notre campus est surveillé par des caméras CCTV fonctionnant 24 heures sur 24, 7 jours sur 7. La sécurité de votre enfant n'est jamais laissée au hasard."
+    }
+  },
+  "testimonials_preview": {
+    "title": "Ce que disent les Familles",
+    "view_all": "Lire Tous les Témoignages"
+  },
+  "news_preview": {
+    "title": "Dernières Actualités & Événements",
+    "view_all": "Voir Toutes les Actualités"
+  },
+  "cta_banner": {
+    "headline": "Offrez à Votre Enfant l'Avantage Linvoy",
+    "subheadline": "Les inscriptions sont ouvertes. Réservez la place de votre enfant dans la seule école K9 holistique avec internat au Ghana.",
+    "button": "Postuler pour l'Inscription",
+    "secondary": "Réserver une Visite"
+  },
+  "about": {
+    "title": "À Propos de Linvoy Academy",
+    "story_title": "Notre Histoire",
+    "story": "Linvoy Academy a été fondée sur une conviction simple mais puissante : chaque enfant mérite d'être aimé, inspiré et d'avoir une vraie chance de réussir. Nous sommes la seule école au Ghana à offrir une véritable éducation K9 holistique  combinant un programme académique rigoureux aligné GES, le français comme matière dédiée à chaque niveau, un internat et un développement du caractère fondé sur des valeurs. Nous accueillons les enfants de toute tribu, religion et nationalité sans exception, car nous croyons que la diversité enrichit chaque classe.",
+    "mission_title": "Notre Mission & Vision",
+    "mission": "Notre mission est d'obtenir le succès et d'inspirer d'autres à venir pour une éducation sérieuse. Notre vision est un Ghana où chaque enfant  quelle que soit son origine  a accès à une éducation mondiale, aimante et holistique qui façonne non seulement sa carrière, mais aussi son caractère.",
+    "values_title": "Nos Valeurs : L·I·N·V·O·Y",
+    "registration_title": "Enregistrement et Accréditation",
+    "registration": "Linvoy Academy est un établissement d'enseignement dûment enregistré en République du Ghana. Notre programme répond aux normes nationales du Ghana Education Service (GES) et nos qualifications sont reconnues à travers le pays.",
+    "staff_title": "Notre Équipe",
+    "holistic_title": "Éducation Holistique",
+    "holistic": "Nous allons au-delà des livres. Chez Linvoy, l'éducation signifie développer l'enfant tout entier  académiquement grâce à notre programme rigoureux aligné GES, avec le français comme matière dédiée, socialement grâce à une communauté diverse et inclusive, physiquement grâce au sport et à l'activité, et moralement grâce à nos valeurs fondamentales. Aucune autre école au Ghana n'offre ce package complet."
+  },
+  "boarding": {
+    "title": "L'Internat de Linvoy Academy",
+    "subtitle": "Un foyer sûr et bienveillant loin de chez soi, pour les élèves venant de tout le Ghana et d'ailleurs.",
+    "intro": "Notre internat est conçu avec une seule priorité : la sécurité, le bonheur et l'épanouissement de votre enfant. Supervisés par un personnel attentionné 24h/24, nos pensionnaires bénéficient d'heures d'étude structurées, de repas sains, d'activités récréatives et d'une communauté soudée qui devient une seconde famille.",
+    "features_title": "La Vie à l'Internat",
+    "features": [
+      { "title": "Surveillance 24h/24",   "description": "Parents de maison qualifiés et personnel de sécurité sur place à toute heure, de jour comme de nuit." },
+      { "title": "Repas Sains",           "description": "Trois repas nutritifs par jour préparés frais sur le campus, avec les besoins alimentaires pris en compte." },
+      { "title": "Étude Structurée",      "description": "Heures d'étude calme dédiées chaque soir, soutenues par des enseignants de permanence." },
+      { "title": "Temps de Loisirs",      "description": "Sports, jeux, arts et activités sociales pour assurer une vie équilibrée et joyeuse." },
+      { "title": "Accompagnement Pastoral", "description": "Entretiens réguliers, soutien psychologique et communication ouverte avec les parents." },
+      { "title": "Chambres Sûres et Propres", "description": "Dortoirs confortables et bien entretenus avec rangements sécurisés pour les affaires personnelles." }
+    ],
+    "eligibility_title": "Qui peut être pensionnaire ?",
+    "eligibility": "L'internat est ouvert à tous les élèves inscrits à Linvoy Academy à partir de l'école primaire. Nous accueillons les élèves journaliers souhaitant passer à l'internat ainsi que les nouveaux élèves rejoignant directement comme pensionnaires.",
+    "enquire_button": "Se Renseigner sur l'Internat",
+    "cta_title": "Intéressé par l'Internat ?",
+    "cta_subtitle": "Contactez-nous pour organiser une visite ou recevoir notre brochure d'internat."
+  },
+  "programs": {
+    "title": "Nos Programmes",
+    "subtitle": "Un programme aligné sur le GES, de la Maternelle au Collège  avec le français comme matière dédiée et des spécialisations en Langues, Commerce et Informatique.",
+    "filter_all": "Tous",
+    "filter_languages": "Langues",
+    "filter_business": "Commerce",
+    "filter_computing": "Informatique",
+    "level_label": "Niveau",
+    "duration": "Durée",
+    "fees": "Frais",
+    "schedule": "Horaires",
+    "apply_now": "Postuler",
+    "no_courses": "Détails complets du programme bientôt disponibles. Contactez-nous pour le prospectus actuel.",
+    "levels_intro_title": "Nos Niveaux Scolaires",
+    "levels": [
+      {
+        "key": "kindergarten",
+        "label": "Maternelle",
+        "grades": "KG 1 – KG 2",
+        "ages": "4–5 ans",
+        "years": "2 ans",
+        "description": "Un début d'apprentissage bienveillant et ludique. Les enfants développent l'alphabétisation et les premières notions de calcul en anglais, avec le français introduit comme matière dédiée dès le premier jour.",
+        "highlights": ["Français enseigné comme matière dès la KG 1", "Apprentissage par le jeu et l'expérience", "Développement social et émotionnel", "Sessions disponibles le matin et l'après-midi"]
+      },
+      {
+        "key": "primary",
+        "label": "École Primaire",
+        "grades": "Basic 1 – Basic 6",
+        "ages": "6–11 ans",
+        "years": "6 ans",
+        "description": "Six années de bases académiques solides, alignées sur le programme du Ghana Education Service (GES). Toutes les matières principales sont enseignées en anglais, avec le français comme matière dédiée tout au long des six années.",
+        "highlights": ["Programme complet aligné GES", "Français comme matière dédiée — toutes les années", "Informatique et culture numérique dès le Basic 1", "Sensibilisation aux affaires intégrée dans les matières"]
+      },
+      {
+        "key": "junior_high",
+        "label": "Collège (JHS)",
+        "grades": "JHS 1 – JHS 3",
+        "ages": "12–14 ans",
+        "years": "3 ans (BECE)",
+        "description": "Trois années de préparation au Brevet d'Études du Premier Cycle (BECE). Les élèves étudient toutes les matières GES avec des filières avancées en Français, Commerce et Informatique, leur donnant un avantage distinctif à l'examen et au-delà.",
+        "highlights": ["Préparation complète au BECE (toutes matières GES)", "Filière Français avancé", "Option Commerce & Entrepreneuriat", "Informatique et TIC sur les trois années", "Internat disponible dès JHS 1"]
+      }
+    ]
+  },
+  "admissions": {
+    "title": "Admissions",
+    "subtitle": "Nous accueillons les enfants de tout horizon. Remplissez ce formulaire et notre équipe d'admissions vous contactera dans les 48 heures.",
+    "requirements_title": "Conditions d'Admission",
+    "requirements": [
+      "Ouvert aux enfants de la Maternelle (~4 ans) jusqu'au Collège",
+      "Bulletin scolaire précédent (si applicable)",
+      "Acte de naissance ou pièce d'identité de l'enfant",
+      "Carte nationale du parent ou tuteur",
+      "Formulaire d'inscription ci-dessous complété",
+      "Optionnel : visite du campus  nous l'encourageons vivement"
+    ],
+    "form": {
+      "student_name": "Nom complet de l'élève",
+      "date_of_birth": "Date de naissance",
+      "grade_applying": "Classe souhaitée",
+      "grade_placeholder": "ex. KG1, CM2, 4ème…",
+      "parent_name": "Nom complet du parent / tuteur",
+      "email": "E-mail du parent / tuteur",
+      "phone": "Téléphone du parent / tuteur",
+      "nationality": "Nationalité de l'élève",
+      "boarding": "Internat souhaité ?",
+      "boarding_yes": "Oui  place en internat souhaitée",
+      "boarding_no": "Non  élève externe",
+      "program": "Programme / Matière d'intérêt (facultatif)",
+      "program_placeholder": "Sélectionnez un programme",
+      "message": "Message complémentaire (facultatif)",
+      "submit": "Soumettre la Candidature",
+      "submitting": "Envoi en cours…",
+      "success": "Merci ! Votre candidature a été reçue. Notre équipe d'admissions vous contactera dans les 48 heures.",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+      "validation": {
+        "required": "Ce champ est obligatoire.",
+        "email": "Veuillez saisir une adresse e-mail valide."
+      }
+    }
+  },
+  "fees": {
+    "title": "Frais et Paiement",
+    "subtitle": "Des frais transparents et accessibles pour chaque famille. Tous les frais sont par trimestre (3 trimestres par année scolaire).",
+    "table_program": "Programme / Niveau",
+    "table_duration": "Durée",
+    "table_fee": "Frais de scolarité (par trimestre)",
+    "boarding_fee_note": "Les frais d'internat (hébergement, repas et encadrement) sont facturés séparément des frais de scolarité. Contactez-nous pour le tarif complet de l'internat.",
+    "contact_for_pricing": "Contactez-nous pour les tarifs",
+    "terms_note": "L'année scolaire se déroule sur 3 trimestres. Les frais indiqués sont par trimestre. Des frais d'inscription uniques s'appliquent à la première entrée.",
+    "registration_fee_label": "Frais d'inscription (uniques)",
+    "registration_fee_value": "Contactez-nous",
+    "static_fee_table": [
+      { "level": "Maternelle (KG 1 – KG 2)", "ages": "4–5 ans", "duration": "2 ans", "fee": "Contactez-nous" },
+      { "level": "École Primaire (Basic 1 – 6)", "ages": "6–11 ans", "duration": "6 ans", "fee": "Contactez-nous" },
+      { "level": "Collège (JHS 1 – 3)", "ages": "12–14 ans", "duration": "3 ans (BECE)", "fee": "Contactez-nous" }
+    ],
+    "boarding_row_label": "Internat (par trimestre, tout niveau)",
+    "boarding_row_fee": "Contactez-nous",
+    "what_included_title": "Ce qui est Inclus dans les Frais de Scolarité",
+    "what_included": [
+      "Toutes les matières alignées sur le programme GES (Anglais, Mathématiques, Sciences, Études Sociales, Français, Informatique)",
+      "Enseignement bilingue  Anglais et Français tout au long du cursus",
+      "Manuels scolaires et matériaux pédagogiques",
+      "Accès à toutes les installations et activités scolaires",
+      "Bulletins scolaires chaque trimestre"
+    ],
+    "payment_title": "Modes de Paiement",
+    "payment_subtitle": "Nous acceptons le Mobile Money, le virement bancaire et le paiement en ligne pour votre commodité.",
+    "mobile_money_title": "Mobile Money",
+    "mobile_money_networks": ["MTN Mobile Money", "Telecel Cash (Vodafone)", "AirtelTigo Money"],
+    "bank_title": "Virement Bancaire",
+    "bank_placeholder": "Coordonnées bancaires fournies à la confirmation d'inscription. Contactez notre bureau des admissions pour les détails.",
+    "paystack_button": "Payer en Ligne avec Paystack"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Un aperçu de la vie vibrante à Linvoy Academy.",
+    "no_items": "Photos et vidéos à venir. Revenez bientôt."
+  },
+  "news": {
+    "title": "Actualités & Événements",
+    "subtitle": "Restez informé de tout ce qui se passe à Linvoy Academy.",
+    "no_posts": "Articles à venir.",
+    "read_more": "Lire la Suite",
+    "back": "← Retour aux Actualités"
+  },
+  "testimonials": {
+    "title": "Témoignages des Familles",
+    "subtitle": "Écoutez les parents et les élèves qui font partie de la famille Linvoy.",
+    "no_testimonials": "Témoignages à venir."
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Tout ce que les parents et les élèves veulent savoir sur Linvoy Academy.",
+    "no_items": "FAQ à venir.",
+    "contact_cta": "Vous avez encore des questions ? Nous sommes heureux de vous aider.",
+    "contact_link": "Nous Contacter"
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Nous serions ravis de vous entendre. Contactez-nous par téléphone, WhatsApp, e-mail ou via le formulaire ci-dessous  nous sommes toujours disponibles.",
+    "address_label": "Adresse",
+    "phone_label": "Téléphone",
+    "email_label": "E-mail",
+    "whatsapp_button": "Discuter sur WhatsApp",
+    "map_placeholder": "Carte du campus bientôt disponible.",
+    "tour_note": "Nous invitons chaleureusement toutes les familles à visiter notre campus. Contactez-nous pour organiser une visite.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Adresse E-mail",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le Message",
+      "submitting": "Envoi en cours…",
+      "success": "Merci ! Votre message a été reçu. Nous vous répondrons dans les plus brefs délais.",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+      "validation": {
+        "required": "Ce champ est obligatoire.",
+        "email": "Veuillez saisir une adresse e-mail valide."
+      }
+    }
+  },
+  "footer": {
+    "tagline": "La seule école K12 holistique avec internat au Ghana  où chaque enfant est aimé, inspiré et a l'opportunité de donner le meilleur de lui-même.",
+    "quick_links": "Liens Rapides",
+    "contact_details": "Coordonnées",
+    "follow_us": "Suivez-Nous",
+    "copyright": "© {year} Linvoy Academy. Tous droits réservés."
+  },
+  "whatsapp_label": "Discuter sur WhatsApp",
+  "loading": "Chargement…",
+  "error_generic": "Une erreur s'est produite. Veuillez réessayer."
+}

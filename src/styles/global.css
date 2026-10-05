@@ -1,0 +1,498 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════════════════════════════════════════ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-cream text-gray-900 font-sans;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 { @apply font-heading; }
+
+  /* Page-load: body starts invisible, fades in after first paint */
+  body {
+    animation: page-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   KEYFRAMES
+═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Page enter  whole body */
+@keyframes page-enter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Hero headline words */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); filter: blur(4px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+
+/* Slide from below, no blur  for badges, subtitles */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade only */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Header slides down from above */
+@keyframes header-enter {
+  from { opacity: 0; transform: translateY(-100%); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Float  blobs, WhatsApp */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+/* Shimmer  gold text gradient sweep */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Premium gold text - multi-layer shimmer with glow pulse */
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; filter: brightness(1) drop-shadow(0 0 0 transparent); }
+  50%  { filter: brightness(1.15) drop-shadow(0 0 8px rgba(240,165,0,0.6)); }
+  100% { background-position: 200% center; filter: brightness(1) drop-shadow(0 0 0 transparent); }
+}
+
+/* Subtle glow pulse for static gold text */
+@keyframes gold-glow-pulse {
+  0%, 100% { text-shadow: 0 0 0 rgba(240,165,0,0), 0 0 0 rgba(240,165,0,0); }
+  50%      { text-shadow: 0 0 12px rgba(240,165,0,0.5), 0 0 24px rgba(240,165,0,0.3); }
+}
+
+/* Letter-by-letter reveal for hero headline */
+@keyframes letter-reveal {
+  from { opacity: 0; transform: translateY(100%); filter: blur(8px); }
+  to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+/* Underline grows from left */
+@keyframes underline-grow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Ripple on button click */
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* Scroll-reveal  cards enter from below */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes reveal-left {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes reveal-right {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Stats counter pulse */
+@keyframes count-in {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Mobile menu slide down */
+@keyframes menu-open {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Partners marquee  infinite left scroll */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Stats counter  number counts up via CSS animation trick */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(12px) scale(0.85); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
+}
+
+/* Pen writing animation for navbar logo - SVG based */
+@keyframes stroke-draw {
+  0% { stroke-dashoffset: 400; opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+
+@keyframes fade-in-text {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes pen-write-linvoy {
+  0% { transform: translateX(0) rotate(0); opacity: 1; }
+  100% { transform: translateX(110px) rotate(0); opacity: 1; }
+}
+
+@keyframes pen-write-academy {
+  0% { transform: translateX(110px) rotate(0); opacity: 1; }
+  50% { transform: translateX(110px) rotate(-5deg); opacity: 1; }
+  100% { transform: translateX(220px) rotate(0); opacity: 1; }
+}
+
+@keyframes pen-idle {
+  0%, 100% { transform: translateX(220px) rotate(0); }
+  50% { transform: translateX(222px) rotate(1deg); }
+}
+
+@keyframes fade-out {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   COMPONENTS
+═══════════════════════════════════════════════════════════════════════════════ */
+@layer components {
+
+  /* ── Buttons ── */
+  .btn-primary {
+    position: relative;
+    overflow: hidden;
+    @apply inline-flex items-center justify-center gap-2
+           px-7 py-3.5 bg-gold text-navy font-bold rounded-xl
+           shadow-lg shadow-gold/30
+           focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+    transition: background-color 0.25s cubic-bezier(0.22,1,0.36,1),
+                transform          0.18s cubic-bezier(0.22,1,0.36,1),
+                box-shadow         0.25s cubic-bezier(0.22,1,0.36,1);
+  }
+  .btn-primary:hover {
+    @apply bg-gold-600;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 32px -4px rgba(240,165,0,0.45);
+  }
+  .btn-primary:active { transform: scale(0.97); }
+
+  .btn-secondary {
+    position: relative;
+    overflow: hidden;
+    @apply inline-flex items-center justify-center gap-2
+           px-7 py-3.5 border-2 border-white text-white font-bold rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+    transition: background-color 0.25s cubic-bezier(0.22,1,0.36,1),
+                color             0.25s cubic-bezier(0.22,1,0.36,1),
+                transform         0.18s cubic-bezier(0.22,1,0.36,1);
+  }
+  .btn-secondary:hover {
+    @apply bg-white text-navy;
+    transform: translateY(-2px) scale(1.02);
+  }
+  .btn-secondary:active { transform: scale(0.97); }
+
+  .btn-outline {
+    position: relative;
+    overflow: hidden;
+    @apply inline-flex items-center justify-center gap-2
+           px-7 py-3.5 border-2 border-navy text-navy font-bold rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2;
+    transition: background-color 0.25s cubic-bezier(0.22,1,0.36,1),
+                color             0.25s cubic-bezier(0.22,1,0.36,1),
+                transform         0.18s cubic-bezier(0.22,1,0.36,1);
+  }
+  .btn-outline:hover {
+    @apply bg-navy text-white;
+    transform: translateY(-2px) scale(1.02);
+  }
+  .btn-outline:active { transform: scale(0.97); }
+
+  /* Ripple span injected by JS */
+  .ripple-wave {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.35);
+    transform: scale(0);
+    pointer-events: none;
+    animation: ripple 0.55s linear forwards;
+  }
+
+  /* ── Section typography ── */
+  .section-title   { @apply text-3xl md:text-4xl font-heading font-bold text-navy mb-4; }
+  .section-subtitle { @apply text-lg text-gray-500 mb-10 max-w-2xl leading-relaxed; }
+
+  /* ── Card ── */
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden;
+    transition: transform 0.35s cubic-bezier(0.22,1,0.36,1),
+                box-shadow 0.35s cubic-bezier(0.22,1,0.36,1);
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px -8px rgba(26,46,110,0.12);
+  }
+
+  /* ── Scroll reveal base states ── */
+  .reveal, .reveal-left, .reveal-right {
+    opacity: 0;
+    will-change: opacity, transform;
+  }
+  .reveal       { transform: translateY(40px); }
+  .reveal-left  { transform: translateX(-32px); }
+  .reveal-right { transform: translateX(32px); }
+
+  .reveal.visible, .reveal-left.visible, .reveal-right.visible {
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    animation-duration: 0.75s;
+  }
+  .reveal.visible       { animation-name: reveal-up; }
+  .reveal-left.visible  { animation-name: reveal-left; }
+  .reveal-right.visible { animation-name: reveal-right; }
+
+  /* Stagger via custom props set by JS */
+  .reveal.visible, .reveal-left.visible, .reveal-right.visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════════════════════════════════════ */
+@layer utilities {
+  /* Animation helpers for hero (load sequence) */
+  .animate-fade-up     { animation: fade-up 0.75s cubic-bezier(0.22,1,0.36,1) both; }
+  .animate-rise        { animation: rise   0.65s cubic-bezier(0.22,1,0.36,1) both; }
+  .animate-fade-in     { animation: fade-in 0.5s ease both; }
+  .animate-float       { animation: float  4s  ease-in-out infinite; will-change: transform; }
+  .animate-header      { animation: header-enter 0.55s cubic-bezier(0.22,1,0.36,1) both; }
+  .animate-count-in    { animation: count-in 0.5s cubic-bezier(0.22,1,0.36,1) both; }
+  .animate-menu-open   { animation: menu-open 0.3s cubic-bezier(0.22,1,0.36,1) both; }
+  .animate-marquee     { animation: marquee 30s linear infinite; will-change: transform; }
+  .animate-marquee:hover { animation-play-state: paused; }
+
+  /* Delay ladder */
+  .delay-50  { animation-delay:  50ms; }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-150 { animation-delay: 150ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-250 { animation-delay: 250ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-350 { animation-delay: 350ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+
+  /* Shimmer gold text */
+  .text-shimmer {
+    background: linear-gradient(90deg, #f0a500 0%, #fcd34d 35%, #fff7d6 50%, #fcd34d 65%, #f0a500 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+    will-change: background-position;
+  }
+
+  /* Premium gold text - enhanced shimmer with glow pulse */
+  .text-gold-premium {
+    background: linear-gradient(90deg, #f0a500 0%, #fcd34d 35%, #fff7d6 50%, #fcd34d 65%, #f0a500 100%);
+    background-size: 250% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gold-shimmer 3s ease-in-out infinite;
+    will-change: background-position, filter;
+  }
+
+  /* Gold glow pulse for solid gold text */
+  .text-gold-glow {
+    color: #f0a500;
+    animation: gold-glow-pulse 2.5s ease-in-out infinite;
+    will-change: text-shadow;
+  }
+
+  /* Letter-by-letter reveal for hero headline */
+  .animate-letter-reveal {
+    display: inline-block;
+    animation: letter-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+    opacity: 0;
+  }
+
+  /* Pen writing animation for navbar logo - SVG based */
+    /* Hero overlay */
+  .hero-overlay {
+    background: linear-gradient(
+      140deg,
+      rgba(26, 46, 110, 0.72) 0%,
+      rgba(26, 46, 110, 0.50) 55%,
+      rgba(10, 18, 50, 0.68) 100%
+    );
+  }
+
+  /* Nav underline indicator */
+  .nav-underline {
+    position: relative;
+  }
+  .nav-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #f0a500;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    border-radius: 2px;
+  }
+  .nav-underline:hover::after,
+  .nav-underline[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   HEADER  nav link hover specifics (can't do with @apply alone)
+═══════════════════════════════════════════════════════════════════════════════ */
+
+/* Nav link base */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(229, 231, 235, 1); /* gray-200 */
+  transition: color       0.22s cubic-bezier(0.22,1,0.36,1),
+              background  0.22s cubic-bezier(0.22,1,0.36,1),
+              transform   0.18s cubic-bezier(0.22,1,0.36,1);
+}
+.nav-link::before {
+  /* background fill that slides up from bottom */
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
+}
+.nav-link:hover { color: #fff; transform: translateY(-1px); }
+.nav-link:hover::before { transform: scaleY(1); }
+.nav-link:active { transform: translateY(0) scale(0.97); }
+
+/* Active state */
+.nav-link-active {
+  background: #f0a500;
+  color: #1a2e6e !important;
+  font-weight: 700;
+  transform: none !important;
+}
+.nav-link-active::before { display: none; }
+
+/* Language toggle */
+.lang-toggle {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid #f0a500;
+  color: #f0a500;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: color       0.25s cubic-bezier(0.22,1,0.36,1),
+              border-color 0.25s cubic-bezier(0.22,1,0.36,1),
+              transform   0.18s cubic-bezier(0.22,1,0.36,1);
+}
+.lang-toggle::before {
+  /* gold fill sweeps in from left */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #f0a500;
+  transform: translateX(-101%);
+  transition: transform 0.28s cubic-bezier(0.22,1,0.36,1);
+  border-radius: inherit;
+  z-index: 0;
+}
+.lang-toggle > * { position: relative; z-index: 1; }
+.lang-toggle:hover { color: #1a2e6e; transform: translateY(-1px); }
+.lang-toggle:hover::before { transform: translateX(0); }
+.lang-toggle:active { transform: scale(0.96); }
+
+/* Mobile menu link */
+.mobile-nav-link {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(209, 213, 219, 1);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+.mobile-nav-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  transform: translateX(4px);
+}
+.mobile-nav-link-active {
+  background: #f0a500;
+  color: #1a2e6e !important;
+  font-weight: 700;
+  transform: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   PROSE  news article body
+═══════════════════════════════════════════════════════════════════════════════ */
+.prose { @apply text-gray-700 leading-relaxed; }
+.prose h2 { @apply text-2xl font-heading font-bold text-navy mt-8 mb-4; }
+.prose h3 { @apply text-xl font-heading font-bold text-navy mt-6 mb-3; }
+.prose p  { @apply mb-4; }
+.prose a  { @apply text-gold underline hover:text-gold-600; }
+.prose ul { @apply list-disc pl-6 mb-4 space-y-1; }
+.prose ol { @apply list-decimal pl-6 mb-4 space-y-1; }
+.prose img { @apply rounded-xl my-6 w-full; }
+.prose blockquote { @apply border-l-4 border-gold pl-4 italic text-gray-500 my-4; }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   REDUCE MOTION  respect user preference
+═══════════════════════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
