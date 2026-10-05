@@ -15,24 +15,24 @@
   },
   "hero": {
     "headline": "Où Chaque Enfant est Aimé, Nourri et Inspiré",
-    "subheadline": "Linvoy Academy  la seule école d'Éducation de Base avec internat au Ghana, offrant un programme aligné GES avec le français comme matière dédiée et des spécialisations en Commerce et Informatique.",
+    "subheadline": "Linvoy Academy  la seule école du Jardin d'enfants au Collège avec internat au Ghana, offrant un programme aligné GES avec le français comme matière dédiée et des spécialisations en Commerce et Informatique.",
     "cta_programs": "Voir les Programmes",
     "cta_register": "S'inscrire Maintenant"
   },
   "programs_overview": {
     "title": "Ce Que Nous Offrons",
-    "subtitle": "Une Éducation de Base complète — de la Maternelle au Collège — avec l'avantage spécialisé dont chaque enfant a besoin.",
+    "subtitle": "Une scolarité complète — du Jardin d'enfants au Collège — avec l'avantage spécialisé dont chaque enfant a besoin.",
     "languages": {
       "title": "Français Langue",
-      "description": "Le français enseigné comme matière dédiée de la KG au JHS, donnant à chaque diplômé une vraie maîtrise de l'une des langues les plus importantes d'Afrique de l'Ouest."
+      "description": "Le français enseigné comme matière dédiée du Jardin d'enfants au Collège, donnant à chaque diplômé une vraie maîtrise de l'une des langues les plus importantes d'Afrique de l'Ouest."
     },
     "business": {
       "title": "Commerce & Entrepreneuriat",
-      "description": "Des compétences pratiques en gestion, comptabilité et entrepreneuriat intégrées au programme du Primaire au JHS pour préparer les élèves à l'économie de demain."
+      "description": "Des compétences pratiques en gestion, comptabilité et entrepreneuriat intégrées au programme de l'École primaire au Collège pour préparer les élèves à l'économie de demain."
     },
     "computing": {
       "title": "Informatique & TIC",
-      "description": "Culture numérique, codage et fondamentaux informatiques enseignés dès le Basic 1, alignés sur le programme NaCCA pour que la technologie devienne une seconde nature."
+      "description": "Culture numérique, codage et fondamentaux informatiques enseignés dès le CP, alignés sur le programme NaCCA pour que la technologie devienne une seconde nature."
     },
     "security": {
       "title": "Sécurité Campus — CCTV 24h/24",
@@ -55,8 +55,8 @@
     "title": "Pourquoi les Familles Choisissent Linvoy",
     "subtitle": "Nous sommes la seule école au Ghana à offrir une véritable éducation holistique  où chaque enfant est le bienvenu.",
     "holistic": {
-      "title": "Vraiment Holistique Éducation de Base",
-      "description": "De la Maternelle au Collège dans une seule école — une communauté, des valeurs cohérentes. Développement académique, moral, social et physique, tout en un seul endroit."
+      "title": "Vraiment Holistique du Jardin d'enfants au Collège",
+      "description": "Du Jardin d'enfants au Collège dans une seule école — une communauté, des valeurs cohérentes. Développement académique, moral, social et physique, tout en un seul endroit."
     },
     "inclusive": {
       "title": "Tous les Bienvenus",
@@ -64,7 +64,7 @@
     },
     "bilingual": {
       "title": "Français comme Matière",
-      "description": "Le français est enseigné comme matière dédiée à chaque niveau — de la KG au JHS — donnant aux diplômés une vraie maîtrise de l'une des langues les plus parlées d'Afrique de l'Ouest."
+      "description": "Le français est enseigné comme matière dédiée à chaque niveau — du Jardin d'enfants au Collège — donnant aux diplômés une vraie maîtrise de l'une des langues les plus parlées d'Afrique de l'Ouest."
     },
     "boarding": {
       "title": "Internat Sécurisé",
@@ -123,7 +123,7 @@
   },
   "programs": {
     "title": "Nos Programmes",
-    "subtitle": "Un programme aligné sur le GES, de la Maternelle au Collège  avec le français comme matière dédiée et des spécialisations en Langues, Commerce et Informatique.",
+    "subtitle": "Un programme aligné sur le GES, du Jardin d'enfants au Collège  avec le français comme matière dédiée et des spécialisations en Langues, Commerce et Informatique.",
     "filter_all": "Tous",
     "filter_languages": "Langues",
     "filter_business": "Commerce",
@@ -138,30 +138,30 @@
     "levels": [
       {
         "key": "kindergarten",
-        "label": "Maternelle",
-        "grades": "KG 1 – KG 2",
-        "ages": "4–5 ans",
-        "years": "2 ans",
+        "label": "Jardin d'enfants (Maternelle)",
+        "grades": "PS – MS – GS",
+        "ages": "3–5 ans",
+        "years": "3 ans",
         "description": "Un début d'apprentissage bienveillant et ludique. Les enfants développent l'alphabétisation et les premières notions de calcul en anglais, avec le français introduit comme matière dédiée dès le premier jour.",
-        "highlights": ["Français enseigné comme matière dès la KG 1", "Apprentissage par le jeu et l'expérience", "Développement social et émotionnel", "Sessions disponibles le matin et l'après-midi"]
+        "highlights": ["Français enseigné comme matière dès la Petite Section", "Apprentissage par le jeu et l'expérience", "Développement social et émotionnel", "Sessions disponibles le matin et l'après-midi"]
       },
       {
         "key": "primary",
         "label": "École Primaire",
-        "grades": "Basic 1 – Basic 6",
+        "grades": "CP – CE1 – CE2 – CM1 – CM2",
         "ages": "6–11 ans",
         "years": "6 ans",
         "description": "Six années de bases académiques solides, alignées sur le programme du Ghana Education Service (GES). Toutes les matières principales sont enseignées en anglais, avec le français comme matière dédiée tout au long des six années.",
-        "highlights": ["Programme complet aligné GES", "Français comme matière dédiée — toutes les années", "Informatique et culture numérique dès le Basic 1", "Sensibilisation aux affaires intégrée dans les matières"]
+        "highlights": ["Programme complet aligné GES", "Français comme matière dédiée — toutes les années", "Informatique et culture numérique dès le CP", "Sensibilisation aux affaires intégrée dans les matières"]
       },
       {
         "key": "junior_high",
-        "label": "Collège (JHS)",
-        "grades": "JHS 1 – JHS 3",
-        "ages": "12–14 ans",
-        "years": "3 ans (BECE)",
-        "description": "Trois années de préparation au Brevet d'Études du Premier Cycle (BECE). Les élèves étudient toutes les matières GES avec des filières avancées en Français, Commerce et Informatique, leur donnant un avantage distinctif à l'examen et au-delà.",
-        "highlights": ["Préparation complète au BECE (toutes matières GES)", "Filière Français avancé", "Option Commerce & Entrepreneuriat", "Informatique et TIC sur les trois années", "Internat disponible dès JHS 1"]
+        "label": "Collège",
+        "grades": "6ème – 5ème – 4ème – 3ème",
+        "ages": "11–15 ans",
+        "years": "4 ans (BECE)",
+        "description": "Quatre années de préparation au Brevet d'Études du Premier Cycle (BECE). Les élèves étudient toutes les matières GES avec des filières avancées en Français, Commerce et Informatique, leur donnant un avantage distinctif à l'examen et au-delà.",
+        "highlights": ["Préparation complète au BECE (toutes matières GES)", "Filière Français avancé", "Option Commerce & Entrepreneuriat", "Informatique et TIC sur les quatre années", "Internat disponible dès la 6ème"]
       }
     ]
   },
@@ -170,7 +170,7 @@
     "subtitle": "Nous accueillons les enfants de tout horizon. Remplissez ce formulaire et notre équipe d'admissions vous contactera dans les 48 heures.",
     "requirements_title": "Conditions d'Admission",
     "requirements": [
-      "Ouvert aux enfants de la Maternelle (~4 ans) jusqu'au Collège",
+      "Ouvert aux enfants du Jardin d'enfants (~3 ans) jusqu'au Collège",
       "Bulletin scolaire précédent (si applicable)",
       "Acte de naissance ou pièce d'identité de l'enfant",
       "Carte nationale du parent ou tuteur",
@@ -181,7 +181,7 @@
       "student_name": "Nom complet de l'élève",
       "date_of_birth": "Date de naissance",
       "grade_applying": "Classe souhaitée",
-      "grade_placeholder": "ex. KG1, CM2, 4ème…",
+      "grade_placeholder": "ex. PS, CM2, 5ème…",
       "parent_name": "Nom complet du parent / tuteur",
       "email": "E-mail du parent / tuteur",
       "phone": "Téléphone du parent / tuteur",
@@ -214,9 +214,9 @@
     "registration_fee_label": "Frais d'inscription (uniques)",
     "registration_fee_value": "Contactez-nous",
     "static_fee_table": [
-      { "level": "Maternelle (KG 1 – KG 2)", "ages": "4–5 ans", "duration": "2 ans", "fee": "Contactez-nous" },
-      { "level": "École Primaire (Basic 1 – 6)", "ages": "6–11 ans", "duration": "6 ans", "fee": "Contactez-nous" },
-      { "level": "Collège (JHS 1 – 3)", "ages": "12–14 ans", "duration": "3 ans (BECE)", "fee": "Contactez-nous" }
+      { "level": "Jardin d'enfants (PS – GS)", "ages": "3–5 ans", "duration": "3 ans", "fee": "Contactez-nous" },
+      { "level": "École Primaire (CP – CM2)", "ages": "6–11 ans", "duration": "6 ans", "fee": "Contactez-nous" },
+      { "level": "Collège (6ème – 3ème)", "ages": "11–15 ans", "duration": "4 ans (BECE)", "fee": "Contactez-nous" }
     ],
     "boarding_row_label": "Internat (par trimestre, tout niveau)",
     "boarding_row_fee": "Contactez-nous",
