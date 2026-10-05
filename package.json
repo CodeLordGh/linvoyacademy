@@ -22,6 +22,9 @@
     "type": "git",
     "url": "https://github.com/mawuenakossibaboh/linvoy-academy"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
